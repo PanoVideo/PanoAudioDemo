@@ -1,0 +1,17 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'PanoAudioChat' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for PanoAudioChat
+  pod 'PanoRtc_iOS' # PanoRtc Framework
+  pod 'SnapKit', '~> 5.0.1'
+  pod "SimpleAlert"
+  pod "Toast-Swift"
+  pod 'UIColor_Hex_Swift', '~> 5.1.0'
+  pod 'GrowingTextView'
+  pod 'Localize-Swift', '~> 3.2.0'
+
+end

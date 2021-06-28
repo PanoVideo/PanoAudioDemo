@@ -1,0 +1,77 @@
+
+/* Class = "UILabel"; text = "上传日志"; ObjectID = "08T-fP-2sJ"; */
+"08T-fP-2sJ.text" = "Upload Log";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "09z-TT-jmp"; */
+"09z-TT-jmp.title" = "Item";
+
+/* Class = "UILabel"; text = "v1.0.0 (1234)"; ObjectID = "0F7-1C-eNZ"; */
+"0F7-1C-eNZ.text" = "v1.0.0 (1234)";
+
+/* Class = "UILabel"; text = "通话人数上限"; ObjectID = "1Xy-7b-Ujr"; */
+"1Xy-7b-Ujr.text" = "Max Participants";
+
+/* Class = "UILabel"; text = "联系方式(选填)"; ObjectID = "3Jy-2Z-PDK"; */
+"3Jy-2Z-PDK.text" = "Contact (Optional)";
+
+/* Class = "UILabel"; text = "问题类型"; ObjectID = "BXu-vN-xPI"; */
+"BXu-vN-xPI.text" = "Problem Type";
+
+/* Class = "UILabel"; text = "调试模式"; ObjectID = "H4r-3c-3PE"; */
+"H4r-3c-3PE.text" = "Debug Mod";
+
+/* Class = "UILabel"; text = "单次通话时长"; ObjectID = "JNz-4A-TTp"; */
+"JNz-4A-TTp.text" = "Call Duration";
+
+/* Class = "UILabel"; text = "问题描述"; ObjectID = "Mz3-IB-Z1Q"; */
+"Mz3-IB-Z1Q.text" = "Problem Description";
+
+/* Class = "UILabel"; text = "90分钟"; ObjectID = "Qt3-B8-YY4"; */
+"Qt3-B8-YY4.text" = "90 Minutes";
+
+/* Class = "UILabel"; text = "100人"; ObjectID = "TDY-WT-mb6"; */
+"TDY-WT-mb6.text" = "100人";
+
+/* Class = "UILabel"; text = "版本号"; ObjectID = "TZo-IU-dRJ"; */
+"TZo-IU-dRJ.text" = "Version";
+
+/* Class = "UIButton"; normalTitle = "确认发送"; ObjectID = "V9b-r4-k0R"; */
+"V9b-r4-k0R.normalTitle" = "Send";
+
+/* Class = "UILabel"; text = "故障上报"; ObjectID = "Zaq-0e-vXk"; */
+"Zaq-0e-vXk.text" = "Send Feedback";
+
+/* Class = "UILabel"; text = "剩余300字"; ObjectID = "dj8-rH-USB"; */
+"dj8-rH-USB.text" = "Remaining 300 characters";
+
+/* Class = "UITextField"; placeholder = "邮箱/手机"; ObjectID = "tQr-mz-eOH"; */
+"tQr-mz-eOH.placeholder" = "Email / Phone Number";
+
+/* Class = "UILabel"; text = "用户名"; ObjectID = "w2n-O1-4mI"; */
+"w2n-O1-4mI.text" = "Name";
+
+/* Class = "UISegmentedControl"; wOI-ky-7SB.segmentTitles[0] = "语音"; ObjectID = "wOI-ky-7SB"; */
+"wOI-ky-7SB.segmentTitles[0]" = "Voice";
+
+/* Class = "UISegmentedControl"; wOI-ky-7SB.segmentTitles[1] = "视频"; ObjectID = "wOI-ky-7SB"; */
+"wOI-ky-7SB.segmentTitles[1]" = "General";
+
+/* Class = "UISegmentedControl"; wOI-ky-7SB.segmentTitles[2] = "白板"; ObjectID = "wOI-ky-7SB"; */
+"wOI-ky-7SB.segmentTitles[2]" = "WhiteBoard";
+
+/* Class = "UISegmentedControl"; wOI-ky-7SB.segmentTitles[3] = "通用"; ObjectID = "wOI-ky-7SB"; */
+"wOI-ky-7SB.segmentTitles[3]" = "General";
+
+"swG-Ko-ger.text" = "Audio pre-processing";
+
+"POg-Cx-O1d.footerTitle" = "Use an external sound card after closing";
+
+"54C-fi-3bd.text" = "None(Default)";
+"zpu-as-6AF.text" = "Monster";
+"51B-xV-Fet.text" = "Male";
+"d7U-SD-SYD.text" = "Female";
+"5K3-u7-Exp.text" = "Echo";
+"kMQ-qH-eAh.text" = "Thriller";
+"zT6-Pi-Hev.text" = "Loli";
+
+"Qq2-7z-yFx.text" = "Voice changer";

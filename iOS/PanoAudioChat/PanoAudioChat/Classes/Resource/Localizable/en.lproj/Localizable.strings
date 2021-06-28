@@ -1,0 +1,139 @@
+/* 
+  Localizable.strings
+  PanoAudioChat
+
+  Created by wenhua.zhang on 2020/11/16.
+  
+*/
+
+"Create a chat room" = "Create a chat room";
+
+"Join the chat room" = "Join the chat room";
+
+"upgradeTitle"  = "Version Upgrade";
+"upgradeAlert"  = "Found a new version, do you want to upgrade?";
+"upgradeTitleForce"  = "Mandatory upgrade";
+"upgradeAlertForce"  = "A new version is found and a mandatory upgrade is required";
+"upgrade"       = "Upgrade Now";
+"notUpgrade"    = "Not Upgrade";
+
+"房间号" = "RoomID";
+
+"输入房间ID/房间号" = "room ID/room number";
+
+"用户名" = "Name";
+
+"输入昵称" = "nickname";
+
+"确认创建" = "Create";
+
+"确认加入" = "Join";
+
+"请输入房间号和用户名" = "Please enter the room number and user name";
+
+"加入房间失败" = "Failed to join the room";
+
+"退出并解散房间" = "Exit and disband the room";
+
+"离开房间" = "Leave the room";
+
+"我要下麦" = "Stop Chat";
+
+"取消" = "Cancel";
+
+"申请上麦" = "Apply";
+
+"确认" = "Confirm";
+
+"房间已解散" = "The room has been dissolved";
+
+"闭麦" = "Mute";
+
+"开麦" = "Unmute";
+
+"强制下麦" = "Forced Stop Chat";
+
+"人在线" = " People Online";
+
+"你被主播邀请上线" = "You were invited by the anchor to go online";
+
+"主播拒绝了你的申请" = "The anchor rejected your application";
+
+"我要下麦" = "Stop Chat";
+
+
+"完成" = "Complete";
+
+"选择成员" = "Select members";
+
+"正在申请上麦" = "Applying for chat";
+
+"未知" = "Unknown";
+
+"允许" = "Allow";
+
+"拒绝" = "Reject";
+
+"已申请上麦，等候通过···" = "waiting for approval...";
+
+"邀请上麦" = "Invite";
+
+"申请中..." = "Applying";
+
+"退出并解散房间" = "Exit and disband the room";
+
+"离开房间" = "Leave the room";
+
+"加入了房间" = "Joined the room";
+
+"离开了房间" = "Leave the room";
+
+"发送" = "Send";
+"  发送  " = "Send";
+"聊两句" = "send text";
+
+"耳返设置" = "Ear Return Setting";
+
+"耳返" = "Ear Return";
+
+"耳返音量大小" = "Volume";
+
+"请插上耳机体验" = "Please plug in headphones";
+
+"音乐1" = "Music-1";
+"音乐2" = "Music-2";
+"音乐3" = "Music-3";
+
+"Music-1" = "音乐1";
+"Music-2" = "音乐2";
+"Music-3" = "音乐3";
+
+"背景音乐" = "Background Music";
+"声效" = "Sound Effects";
+
+"哈哈哈"= "Hahaha";
+"哇哦" = "Wow";
+"鼓掌" = "Clap";
+"尴尬" = "awkward";
+"乌鸦" = "crow";
+"起哄" = "Booing";
+
+"Hahaha" = "哈哈哈";
+"Wow" = "哇哦";
+"Clap" = "鼓掌";
+"awkward" = "尴尬";
+"crow" = "乌鸦";
+"Booing" = "起哄";
+"debugAlert"    = "Enable debug mode will generate more logs (up to 200M). Please disable debug mode in time after debugging. Are you sure to enable debug mode?";
+"问题反馈" = "Feedback";
+"音频故障日志上传" = "Audio Log Upload";
+"问题描述" = "Problem Description";
+"接受" = "Accept";
+"主播邀请您上麦" = "The Anchor Invites You To Chat";
+"拒绝了你的邀请" = "reject your invitation";
+"您关闭了音频前处理，建议使用外置声卡。" = "You have turned off audio pre-processing. It is recommended to use an external sound card.";
+"请在加入房间前设置" = "Please set before joining the room";
+"主播禁止你发音" = "The anchor forbids you to speak";
+"长时间未接受你的邀请"= "The audience hasn't accepted your invitation for a long time";
+"主播长时间未同意你的申请上麦" = "The anchor didn't agree to your application for a long time";
+"当前麦位被占用" = "The current mic is occupied";

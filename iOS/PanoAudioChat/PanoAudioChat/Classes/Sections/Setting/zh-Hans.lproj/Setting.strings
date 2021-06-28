@@ -1,0 +1,63 @@
+
+/* Class = "UILabel"; text = "上传日志"; ObjectID = "08T-fP-2sJ"; */
+"08T-fP-2sJ.text" = "上传日志";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "09z-TT-jmp"; */
+"09z-TT-jmp.title" = "Item";
+
+/* Class = "UILabel"; text = "v1.0.0 (1234)"; ObjectID = "0F7-1C-eNZ"; */
+"0F7-1C-eNZ.text" = "v1.0.0 (1234)";
+
+/* Class = "UILabel"; text = "通话人数上限"; ObjectID = "1Xy-7b-Ujr"; */
+"1Xy-7b-Ujr.text" = "通话人数上限";
+
+/* Class = "UILabel"; text = "联系方式(选填)"; ObjectID = "3Jy-2Z-PDK"; */
+"3Jy-2Z-PDK.text" = "联系方式(选填)";
+
+/* Class = "UILabel"; text = "问题类型"; ObjectID = "BXu-vN-xPI"; */
+"BXu-vN-xPI.text" = "问题类型";
+
+/* Class = "UILabel"; text = "调试模式"; ObjectID = "H4r-3c-3PE"; */
+"H4r-3c-3PE.text" = "调试模式";
+
+/* Class = "UILabel"; text = "单次通话时长"; ObjectID = "JNz-4A-TTp"; */
+"JNz-4A-TTp.text" = "单次通话时长";
+
+/* Class = "UILabel"; text = "问题描述"; ObjectID = "Mz3-IB-Z1Q"; */
+"Mz3-IB-Z1Q.text" = "问题描述";
+
+/* Class = "UILabel"; text = "90分钟"; ObjectID = "Qt3-B8-YY4"; */
+"Qt3-B8-YY4.text" = "90分钟";
+
+/* Class = "UILabel"; text = "100人"; ObjectID = "TDY-WT-mb6"; */
+"TDY-WT-mb6.text" = "100人";
+
+/* Class = "UILabel"; text = "版本号"; ObjectID = "TZo-IU-dRJ"; */
+"TZo-IU-dRJ.text" = "版本号";
+
+/* Class = "UIButton"; normalTitle = "确认发送"; ObjectID = "V9b-r4-k0R"; */
+"V9b-r4-k0R.normalTitle" = "确认发送";
+
+/* Class = "UILabel"; text = "故障上报"; ObjectID = "Zaq-0e-vXk"; */
+"Zaq-0e-vXk.text" = "故障上报";
+
+/* Class = "UILabel"; text = "剩余300字"; ObjectID = "dj8-rH-USB"; */
+"dj8-rH-USB.text" = "剩余300字";
+
+/* Class = "UITextField"; placeholder = "邮箱/手机"; ObjectID = "tQr-mz-eOH"; */
+"tQr-mz-eOH.placeholder" = "邮箱/手机";
+
+/* Class = "UILabel"; text = "用户名"; ObjectID = "w2n-O1-4mI"; */
+"w2n-O1-4mI.text" = "用户名";
+
+/* Class = "UISegmentedControl"; wOI-ky-7SB.segmentTitles[0] = "语音"; ObjectID = "wOI-ky-7SB"; */
+"wOI-ky-7SB.segmentTitles[0]" = "语音";
+
+/* Class = "UISegmentedControl"; wOI-ky-7SB.segmentTitles[1] = "视频"; ObjectID = "wOI-ky-7SB"; */
+"wOI-ky-7SB.segmentTitles[1]" = "通用";
+
+/* Class = "UISegmentedControl"; wOI-ky-7SB.segmentTitles[2] = "白板"; ObjectID = "wOI-ky-7SB"; */
+"wOI-ky-7SB.segmentTitles[2]" = "白板";
+
+/* Class = "UISegmentedControl"; wOI-ky-7SB.segmentTitles[3] = "通用"; ObjectID = "wOI-ky-7SB"; */
+"wOI-ky-7SB.segmentTitles[3]" = "通用";
