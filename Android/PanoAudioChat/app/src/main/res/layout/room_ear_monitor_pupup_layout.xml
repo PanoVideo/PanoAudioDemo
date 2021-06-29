@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/music_popup_bg">
+
+    <TextView
+        android:id="@+id/ear_monitor_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:text="@string/room_ear_monitor_setting"
+        android:textColor="@color/color_333"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ear_monitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        android:text="@string/room_ear_monitor"
+        android:textColor="@color/color_333"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ear_monitor_title" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/ear_monitor_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/ear_monitor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ear_monitor" />
+
+    <TextView
+        android:id="@+id/ear_monitor_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        android:text="@string/room_ear_monitor_volume"
+        android:textColor="@color/color_333"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ear_monitor" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/ear_return_volume"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="100"
+        app:layout_constraintBottom_toBottomOf="@id/ear_monitor_volume"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ear_monitor_volume"
+        app:layout_constraintTop_toTopOf="@id/ear_monitor_volume" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/color_eee"
+        app:layout_constraintTop_toBottomOf="@id/ear_monitor_volume" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        android:text="@string/cancel"
+        android:textColor="@color/color_333"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+</androidx.constraintlayout.widget.ConstraintLayout>

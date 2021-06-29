@@ -1,0 +1,27 @@
+<resources>
+    <string-array name="bgm_names">
+        <item>BGM 1</item>
+        <item>BGM 2</item>
+        <item>BGM 3</item>
+    </string-array>
+
+    <string-array name="sound_types">
+        <item>LOL</item>
+        <item>Wow</item>
+        <item>Clap</item>
+        <item>Awkward</item>
+        <item>Crow</item>
+        <item>Heckle</item>
+    </string-array>
+
+    <string-array name="voice_list">
+        <item>None（Default）</item>
+        <item>Monster</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Echo</item>
+        <item>Thriller</item>
+        <item>Loli</item>
+    </string-array>
+
+</resources>

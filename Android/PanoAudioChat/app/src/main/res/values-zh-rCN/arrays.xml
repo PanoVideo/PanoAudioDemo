@@ -1,0 +1,27 @@
+<resources>
+    <string-array name="bgm_names">
+        <item>音乐1</item>
+        <item>音乐2</item>
+        <item>音乐3</item>
+    </string-array>
+
+    <string-array name="sound_types">
+        <item>哈哈哈</item>
+        <item>哇哦</item>
+        <item>鼓掌</item>
+        <item>尴尬</item>
+        <item>乌鸦</item>
+        <item>起哄</item>
+    </string-array>
+
+    <string-array name="voice_list">
+        <item>无音效（默认）</item>
+        <item>怪兽</item>
+        <item>男声</item>
+        <item>女声</item>
+        <item>回声</item>
+        <item>惊悚声</item>
+        <item>萝莉</item>
+    </string-array>
+
+</resources>

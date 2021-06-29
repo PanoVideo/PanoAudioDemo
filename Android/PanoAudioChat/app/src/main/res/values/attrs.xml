@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonTitle">
+        <attr name="customTitle" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="WaveImageView">
+        <attr name="drawablePadding" format="dimension"/>
+    </declare-styleable>
+</resources>

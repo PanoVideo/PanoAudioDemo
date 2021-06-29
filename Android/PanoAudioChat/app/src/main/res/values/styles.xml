@@ -1,0 +1,55 @@
+<resources>
+
+    <style name="setting_title_base_style" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textColor">@color/color_333</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginStart">20dp</item>
+    </style>
+
+    <style name="setting_title_style" parent="@style/setting_title_base_style">
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <style name="setting_message_style" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textColor">#80333333</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+    <style name="setting_description_style" parent="@android:style/TextAppearance.Small">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#80333333</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+    </style>
+
+    <style name="setting_arrow_style">
+        <item name="android:src">@drawable/icon_setting_arrow</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="tint">#80333333</item>
+    </style>
+
+    <style name="setting_divider_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:background">@color/color_eee</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+</resources>

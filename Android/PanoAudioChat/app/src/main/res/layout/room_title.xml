@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/room_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:onClick="onClickNotice"
+        android:paddingStart="10dp"
+        android:src="@drawable/icon_notice"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/people_online"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/room_id"
+        tools:visibility="visible"
+        tools:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/notice_badge_num"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/room_notice_badge_bg"
+        android:gravity="center"
+        android:text="12"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/room_notice"
+        app:layout_constraintTop_toTopOf="@id/room_notice"
+        tools:visibility="visible"
+        tools:text="12"
+        />
+
+    <TextView
+        android:id="@+id/room_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RoomId"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/people_online"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 people online"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/room_id" />
+
+    <ImageView
+        android:id="@+id/room_exit_img"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:onClick="onClickExit"
+        android:paddingStart="10dp"
+        android:paddingEnd="20dp"
+        android:src="@drawable/icon_exit"
+        app:layout_constraintBottom_toBottomOf="@id/people_online"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/room_id" />
+
+    <ImageView
+        android:id="@+id/room_setting_img"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:onClick="onClickSetting"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:src="@drawable/icon_setting"
+        app:layout_constraintBottom_toBottomOf="@id/people_online"
+        app:layout_constraintEnd_toStartOf="@id/room_exit_img"
+        app:layout_constraintTop_toTopOf="@id/room_id" />
+
+</merge>

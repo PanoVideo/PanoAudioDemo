@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <video.pano.audiochat.view.CommonTitle
+        android:id="@+id/setting_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:customTitle="@string/setting"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/setting_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/user_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/host_name"
+                    style="@style/setting_title_style"
+                    android:text="@string/setting_name"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/user_name_edit"
+                    style="@style/setting_message_style"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/edit_text_bg_small_radius"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/room_name_hint"
+                    android:inputType="text"
+                    android:maxLength="32"
+                    android:minWidth="100dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    app:layout_constraintStart_toEndOf="@id/host_name"
+                    tools:ignore="MissingConstraints" />
+
+                <View
+                    style="@style/setting_divider_style"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/call_duration_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/user_name_layout">
+
+                <TextView
+                    android:id="@+id/call_duration"
+                    style="@style/setting_title_style"
+                    android:text="@string/setting_call_duration"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/call_duration_minutes"
+                    style="@style/setting_message_style"
+                    android:text="@string/setting_call_duration_minutes"
+                    tools:ignore="MissingConstraints" />
+
+                <View
+                    style="@style/setting_divider_style"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/max_participants_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/call_duration_layout">
+
+                <TextView
+                    android:id="@+id/max_participants"
+                    style="@style/setting_title_style"
+                    android:text="@string/setting_max_participants"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/max_participants_people"
+                    style="@style/setting_message_style"
+                    android:text="@string/setting_max_participants_people"
+                    tools:ignore="MissingConstraints" />
+
+                <View
+                    style="@style/setting_divider_style"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/voice_change_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:onClick="onClickVoiceChange"
+                app:layout_constraintTop_toBottomOf="@id/max_participants_layout">
+
+                <TextView
+                    android:id="@+id/voice_change"
+                    style="@style/setting_title_style"
+                    android:text="@string/setting_voice_change"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    style="@style/setting_arrow_style"
+                    android:contentDescription="@string/app_name"
+                    tools:ignore="MissingConstraints" />
+
+                <View
+                    style="@style/setting_divider_style"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/audio_pre_process_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/voice_change_layout">
+
+                <TextView
+                    android:id="@+id/audio_pre_process"
+                    style="@style/setting_title_style"
+                    android:text="@string/setting_audio_pre_process"
+                    tools:ignore="MissingConstraints" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/audio_pre_process_mode_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    style="@style/setting_divider_style"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/audio_pre_process_tips"
+                style="@style/setting_description_style"
+                android:text="@string/setting_audio_pre_process_tips"
+                app:layout_constraintTop_toBottomOf="@id/audio_pre_process_layout"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/send_feedback_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:onClick="onClickSendFeedback"
+                app:layout_constraintTop_toBottomOf="@id/audio_pre_process_tips">
+
+                <TextView
+                    android:id="@+id/send_feedback"
+                    style="@style/setting_title_style"
+                    android:text="@string/setting_send_feedback"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    style="@style/setting_arrow_style"
+                    android:contentDescription="@string/app_name"
+                    tools:ignore="MissingConstraints" />
+
+                <View
+                    style="@style/setting_divider_style"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/debug_mode_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/send_feedback_layout">
+
+                <TextView
+                    android:id="@+id/debug_mode"
+                    style="@style/setting_title_style"
+                    android:text="@string/setting_debug_mode"
+                    tools:ignore="MissingConstraints" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/debug_mode_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    style="@style/setting_divider_style"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/audio_log_upload_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:onClick="onClickUploadAudioLog"
+                app:layout_constraintTop_toBottomOf="@id/debug_mode_layout">
+
+                <TextView
+                    android:id="@+id/audio_log_upload"
+                    style="@style/setting_title_style"
+                    android:text="@string/setting_audio_log_upload"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    style="@style/setting_arrow_style"
+                    android:contentDescription="@string/app_name"
+                    tools:ignore="MissingConstraints" />
+
+                <View
+                    style="@style/setting_divider_style"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/app_version_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+
+                app:layout_constraintTop_toBottomOf="@id/audio_log_upload_layout">
+
+                <TextView
+                    android:id="@+id/app_version"
+                    style="@style/setting_title_style"
+                    android:text="@string/setting_Version"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/app_version_des"
+                    style="@style/setting_message_style"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    style="@style/setting_divider_style"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
