@@ -3,581 +3,711 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		589F9609BB550E2D7F9E4131 /* Pods_PanoAudioChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBE50219A6BE427021DE8CD /* Pods_PanoAudioChat.framework */; };
-		BD1FCE5C254A6B2900DE0CDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCE5B254A6B2900DE0CDE /* AppDelegate.swift */; };
-		BD1FCE60254A6B2900DE0CDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCE5F254A6B2900DE0CDE /* ViewController.swift */; };
-		BD1FCE65254A6B2B00DE0CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD1FCE64254A6B2B00DE0CDE /* Assets.xcassets */; };
-		BD1FCE68254A6B2B00DE0CDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD1FCE66254A6B2B00DE0CDE /* LaunchScreen.storyboard */; };
-		BD1FCE84254A6BFD00DE0CDE /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCE7A254A6BFD00DE0CDE /* MulticastDelegate.swift */; };
-		BD1FCE85254A6BFD00DE0CDE /* PanoHttpUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCE7B254A6BFD00DE0CDE /* PanoHttpUtil.swift */; };
-		BD1FCE87254A6BFD00DE0CDE /* PanoUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCE7F254A6BFD00DE0CDE /* PanoUserService.swift */; };
-		BD1FCE88254A6BFD00DE0CDE /* PanoAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCE80254A6BFD00DE0CDE /* PanoAudioService.swift */; };
-		BD1FCE89254A6BFD00DE0CDE /* PanoBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCE81254A6BFD00DE0CDE /* PanoBaseService.swift */; };
-		BD1FCE8A254A6BFD00DE0CDE /* PanoClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCE82254A6BFD00DE0CDE /* PanoClientService.swift */; };
-		BD1FCE8B254A6BFD00DE0CDE /* PanoServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCE83254A6BFD00DE0CDE /* PanoServiceManager.swift */; };
-		BD1FCE95254A6CBB00DE0CDE /* PanoBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCE94254A6CBB00DE0CDE /* PanoBaseView.swift */; };
-		BD1FCE98254A6D4900DE0CDE /* PanoBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCE97254A6D4900DE0CDE /* PanoBaseViewController.swift */; };
-		BD1FCE9B254A6D8B00DE0CDE /* PanoBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCE9A254A6D8B00DE0CDE /* PanoBaseNavigationController.swift */; };
-		BD1FCE9E254A6DBB00DE0CDE /* PanoHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCE9D254A6DBB00DE0CDE /* PanoHomeViewController.swift */; };
-		BD1FCEA1254A6DDA00DE0CDE /* PanoJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCEA0254A6DDA00DE0CDE /* PanoJoinViewController.swift */; };
-		BD1FCEB3254A8FD000DE0CDE /* PanoAppDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCEB2254A8FD000DE0CDE /* PanoAppDefine.swift */; };
-		BD1FCEB7254A95D900DE0CDE /* PanoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCEB6254A95D900DE0CDE /* PanoTextField.swift */; };
-		BD1FCEB9254A9C3000DE0CDE /* PanoAudioRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCEB8254A9C3000DE0CDE /* PanoAudioRoomController.swift */; };
-		BD1FCEBB254AA1E000DE0CDE /* PanoChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCEBA254AA1E000DE0CDE /* PanoChatService.swift */; };
-		BD1FCEBD254AB6E900DE0CDE /* PanoMessageDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCEBC254AB6E900DE0CDE /* PanoMessageDefine.swift */; };
-		BD1FCEC7254AC9B400DE0CDE /* PanoMicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCEC6254AC9B400DE0CDE /* PanoMicInfo.swift */; };
-		BD1FCECC254ADBB500DE0CDE /* PanoAudioRoomDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCECB254ADBB500DE0CDE /* PanoAudioRoomDataSource.swift */; };
-		BD1FCED2254AE5A600DE0CDE /* PanoAudioRoomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCED1254AE5A600DE0CDE /* PanoAudioRoomPresenter.swift */; };
-		BD1FCED4254AEAFD00DE0CDE /* PanoInviteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FCED3254AEAFD00DE0CDE /* PanoInviteListViewController.swift */; };
-		BD3DC426260AD6B800BF844D /* PanoVoiceTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3DC425260AD6B800BF844D /* PanoVoiceTableController.swift */; };
-		BD49CC97254BF52400CA30EE /* PanoRoomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CC90254BF52400CA30EE /* PanoRoomHeaderView.swift */; };
-		BD49CC98254BF52400CA30EE /* PanoMicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CC93254BF52400CA30EE /* PanoMicButton.swift */; };
-		BD49CC99254BF52400CA30EE /* PanoMicCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CC94254BF52400CA30EE /* PanoMicCollectionCell.swift */; };
-		BD49CC9A254BF52400CA30EE /* PanoMicQueueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CC95254BF52400CA30EE /* PanoMicQueueView.swift */; };
-		BD49CC9C254BF55600CA30EE /* PanoNaviTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CC9B254BF55600CA30EE /* PanoNaviTitleView.swift */; };
-		BD49CCA5254FE68600CA30EE /* PanoUserListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCA4254FE68600CA30EE /* PanoUserListHeaderView.swift */; };
-		BD49CCA7254FE69200CA30EE /* PanoUserListFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCA6254FE69200CA30EE /* PanoUserListFooterView.swift */; };
-		BD49CCAA254FEBAA00CA30EE /* PanoUserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCA9254FEBAA00CA30EE /* PanoUserListCell.swift */; };
-		BD49CCAC25502E1300CA30EE /* PanoAlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCAB25502E1300CA30EE /* PanoAlertHelper.swift */; };
-		BD49CCB42550FD9700CA30EE /* PanoApplyUserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCB32550FD9700CA30EE /* PanoApplyUserListView.swift */; };
-		BD49CCB82551059600CA30EE /* PanoApplyUserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCB72551059600CA30EE /* PanoApplyUserListCell.swift */; };
-		BD49CCBA25510A0700CA30EE /* PanoApplyAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCB925510A0700CA30EE /* PanoApplyAlertView.swift */; };
-		BD49CCBC25511B5900CA30EE /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCBB25511B5900CA30EE /* ColorExtension.swift */; };
-		BD49CCBE25515E4100CA30EE /* PanoMyApplyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCBD25515E4100CA30EE /* PanoMyApplyView.swift */; };
-		BD49CCC0255163FA00CA30EE /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCBF255163FA00CA30EE /* UIViewExtension.swift */; };
-		BD49CCC72551922F00CA30EE /* PanoPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCC62551922F00CA30EE /* PanoPlayerService.swift */; };
-		BD49CCCA25519A1C00CA30EE /* PanoSoundEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCC925519A1C00CA30EE /* PanoSoundEffectView.swift */; };
-		BD49CCCC2552391A00CA30EE /* PanoChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCCB2552391A00CA30EE /* PanoChatView.swift */; };
-		BD49CCCE2552394200CA30EE /* PanoChatTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCCD2552394200CA30EE /* PanoChatTextCell.swift */; };
-		BD49CCD0255241BD00CA30EE /* PanoAudioPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCCF255241BD00CA30EE /* PanoAudioPanelView.swift */; };
-		BD49CCD22552423C00CA30EE /* PanoAudioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCD12552423C00CA30EE /* PanoAudioPlayerView.swift */; };
-		BD49CCD425524B8C00CA30EE /* PanoAudioVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCD325524B8C00CA30EE /* PanoAudioVolume.swift */; };
-		BD49CCD82552A59E00CA30EE /* 音乐3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD49CCD52552A59D00CA30EE /* 音乐3.mp3 */; };
-		BD49CCD92552A59E00CA30EE /* 音乐2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD49CCD62552A59D00CA30EE /* 音乐2.mp3 */; };
-		BD49CCDA2552A59E00CA30EE /* 音乐1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD49CCD72552A59E00CA30EE /* 音乐1.mp3 */; };
-		BD49CCE82552A5EB00CA30EE /* 乌鸦.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD49CCDD2552A5EA00CA30EE /* 乌鸦.caf */; };
-		BD49CCE92552A5EB00CA30EE /* 鼓掌.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD49CCDF2552A5EA00CA30EE /* 鼓掌.caf */; };
-		BD49CCEA2552A5EB00CA30EE /* 尴尬.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD49CCE12552A5EA00CA30EE /* 尴尬.caf */; };
-		BD49CCEB2552A5EB00CA30EE /* 哈哈哈.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD49CCE32552A5EA00CA30EE /* 哈哈哈.caf */; };
-		BD49CCEC2552A5EB00CA30EE /* 起哄.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD49CCE52552A5EA00CA30EE /* 起哄.caf */; };
-		BD49CCED2552A5EB00CA30EE /* 哇哦.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD49CCE72552A5EA00CA30EE /* 哇哦.caf */; };
-		BD49CCF02552CFC600CA30EE /* PanoEarMonitoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCEF2552CFC600CA30EE /* PanoEarMonitoring.swift */; };
-		BD49CCF22552E28600CA30EE /* PanoChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCF12552E28600CA30EE /* PanoChatInputView.swift */; };
-		BD49CD002553A2C200CA30EE /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD49CCFF2553A2C200CA30EE /* FeedbackViewController.m */; };
-		BD49CD032553A30900CA30EE /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD49CD012553A30900CA30EE /* SettingTableViewController.m */; };
-		BD681C9826733D0A00C73AC1 /* PanoClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD681C9726733D0A00C73AC1 /* PanoClientInterface.swift */; };
-		BD681C9A26733D5A00C73AC1 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD681C9926733D5A00C73AC1 /* AppConfig.swift */; };
-		BD681C9C26733E4D00C73AC1 /* PanoClientService+ResutfulAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD681C9B26733E4D00C73AC1 /* PanoClientService+ResutfulAPI.swift */; };
-		BD681CB526734BA600C73AC1 /* PanoClientService+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD681CB426734BA600C73AC1 /* PanoClientService+App.swift */; };
-		BD681CB72673540700C73AC1 /* PanoClientService+OpenApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD681CB62673540700C73AC1 /* PanoClientService+OpenApi.swift */; };
-		BD681CBB267369CE00C73AC1 /* PanoSignalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD681CBA267369CE00C73AC1 /* PanoSignalService.swift */; };
-		BD8A30092563743800B03474 /* PanoFeedAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8A30082563743800B03474 /* PanoFeedAudioController.swift */; };
-		BD977F442554DB0C00352FA4 /* PanoNaviBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD977F432554DB0C00352FA4 /* PanoNaviBadgeView.swift */; };
-		BDD402C825621C150027D089 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDD402CA25621C150027D089 /* Localizable.strings */; };
-		BDD402CC25622E7F0027D089 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD402CE25622E7F0027D089 /* Setting.storyboard */; };
+		BDFF7C5426A8042E0080DBCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7C5326A8042E0080DBCC /* AppDelegate.m */; };
+		BDFF7C5D26A8042E0080DBCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDFF7C5B26A8042E0080DBCC /* Main.storyboard */; };
+		BDFF7C6226A804320080DBCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDFF7C6026A804320080DBCC /* LaunchScreen.storyboard */; };
+		BDFF7C6526A804320080DBCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7C6426A804320080DBCC /* main.m */; };
+		BDFF7DC126A817D80080DBCC /* PanoTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7DBC26A817D80080DBCC /* PanoTextField.m */; };
+		BDFF7DC226A817D80080DBCC /* PanoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7DBD26A817D80080DBCC /* PanoHomeViewController.m */; };
+		BDFF7DC326A817D80080DBCC /* PanoJoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7DBF26A817D80080DBCC /* PanoJoinViewController.m */; };
+		BDFF7FDB26A9450F0080DBCC /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F3A26A9450E0080DBCC /* AppConfig.m */; };
+		BDFF7FDC26A9450F0080DBCC /* PanoInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F3B26A9450E0080DBCC /* PanoInterface.m */; };
+		BDFF7FDD26A9450F0080DBCC /* PanoUserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F4326A9450E0080DBCC /* PanoUserListCell.m */; };
+		BDFF7FDE26A9450F0080DBCC /* PanoInviteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F4426A9450E0080DBCC /* PanoInviteListViewController.m */; };
+		BDFF7FDF26A9450F0080DBCC /* PanoAudioRoomPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F4626A9450E0080DBCC /* PanoAudioRoomPresenter.m */; };
+		BDFF7FE026A9450F0080DBCC /* PanoAudioRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F4726A9450E0080DBCC /* PanoAudioRoomController.m */; };
+		BDFF7FE126A9450F0080DBCC /* PanoChatTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F4D26A9450E0080DBCC /* PanoChatTextCell.m */; };
+		BDFF7FE226A9450F0080DBCC /* PanoChatInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F4E26A9450E0080DBCC /* PanoChatInputView.m */; };
+		BDFF7FE326A9450F0080DBCC /* PanoChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F5026A9450E0080DBCC /* PanoChatView.m */; };
+		BDFF7FE426A9450F0080DBCC /* PanoMicCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F5226A9450E0080DBCC /* PanoMicCollectionCell.m */; };
+		BDFF7FE526A9450F0080DBCC /* PanoMicButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F5326A9450E0080DBCC /* PanoMicButton.m */; };
+		BDFF7FE626A9450F0080DBCC /* PanoMicQueueView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F5726A9450E0080DBCC /* PanoMicQueueView.m */; };
+		BDFF7FE726A9450F0080DBCC /* PanoMyApplyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F5C26A9450E0080DBCC /* PanoMyApplyView.m */; };
+		BDFF7FE826A9450F0080DBCC /* PanoApplyAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F5D26A9450E0080DBCC /* PanoApplyAlertView.m */; };
+		BDFF7FE926A9450F0080DBCC /* PanoApplyUserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F5E26A9450E0080DBCC /* PanoApplyUserListCell.m */; };
+		BDFF7FEA26A9450F0080DBCC /* PanoApplyUserListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F6026A9450E0080DBCC /* PanoApplyUserListView.m */; };
+		BDFF7FEB26A9450F0080DBCC /* PanoRoomHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F6326A9450E0080DBCC /* PanoRoomHeaderView.m */; };
+		BDFF7FEC26A9450F0080DBCC /* PanoEarMonitoring.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F6626A9450E0080DBCC /* PanoEarMonitoring.m */; };
+		BDFF7FED26A9450F0080DBCC /* PanoNaviTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F6826A9450E0080DBCC /* PanoNaviTitleView.m */; };
+		BDFF7FEE26A9450F0080DBCC /* PanoNaviBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F6926A9450E0080DBCC /* PanoNaviBadgeView.m */; };
+		BDFF7FEF26A9450F0080DBCC /* PanoAudioVolume.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F6D26A9450E0080DBCC /* PanoAudioVolume.m */; };
+		BDFF7FF026A9450F0080DBCC /* PanoAudioPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F6F26A9450E0080DBCC /* PanoAudioPanelView.m */; };
+		BDFF7FF126A9450F0080DBCC /* PanoAudioPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F7126A9450E0080DBCC /* PanoAudioPlayerView.m */; };
+		BDFF7FF226A9450F0080DBCC /* PanoAudioRoomDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F7526A9450E0080DBCC /* PanoAudioRoomDataSource.m */; };
+		BDFF7FF326A9450F0080DBCC /* Setting.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDFF7F7826A9450E0080DBCC /* Setting.strings */; };
+		BDFF7FF426A9450F0080DBCC /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDFF7F7E26A9450E0080DBCC /* Setting.storyboard */; };
+		BDFF7FF626A9450F0080DBCC /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F8126A9450E0080DBCC /* SettingTableViewController.m */; };
+		BDFF7FF726A9450F0080DBCC /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F8226A9450E0080DBCC /* FeedbackViewController.m */; };
+		BDFF7FF826A9450F0080DBCC /* PanoAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F8426A9450E0080DBCC /* PanoAction.m */; };
+		BDFF7FF926A9450F0080DBCC /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F8826A9450E0080DBCC /* UIImage+Extension.m */; };
+		BDFF7FFA26A9450F0080DBCC /* PanoMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F8A26A9450E0080DBCC /* PanoMenuCell.m */; };
+		BDFF7FFB26A9450F0080DBCC /* PanoArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F8B26A9450E0080DBCC /* PanoArrayDataSource.m */; };
+		BDFF7FFC26A9450F0080DBCC /* PanoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F8C26A9450E0080DBCC /* PanoItem.m */; };
+		BDFF7FFD26A9450F0080DBCC /* PanoAvatorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F8D26A9450E0080DBCC /* PanoAvatorUtil.m */; };
+		BDFF7FFE26A9450F0080DBCC /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F9026A9450E0080DBCC /* UIColor+Extension.m */; };
+		BDFF7FFF26A9450F0080DBCC /* PanoMulticastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F9226A9450E0080DBCC /* PanoMulticastDelegate.m */; };
+		BDFF800026A9450F0080DBCC /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F9426A9450E0080DBCC /* MBProgressHUD+Extension.m */; };
+		BDFF800126A9450F0080DBCC /* PanoTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F9A26A9450E0080DBCC /* PanoTextViewInternal.m */; };
+		BDFF800226A9450F0080DBCC /* PanoGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F9D26A9450E0080DBCC /* PanoGrowingTextView.m */; };
+		BDFF800326A9450F0080DBCC /* PanoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F9F26A9450E0080DBCC /* PanoMessage.m */; };
+		BDFF800426A9450F0080DBCC /* PanoUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7FA226A9450E0080DBCC /* PanoUserInfo.m */; };
+		BDFF800526A9450F0080DBCC /* PanoMicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7FA526A9450E0080DBCC /* PanoMicInfo.m */; };
+		BDFF800626A9450F0080DBCC /* PanoMessageDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7FA726A9450E0080DBCC /* PanoMessageDefine.m */; };
+		BDFF800726A9450F0080DBCC /* 音乐3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDFF7FAA26A9450E0080DBCC /* 音乐3.mp3 */; };
+		BDFF800826A9450F0080DBCC /* 音乐2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDFF7FAB26A9450E0080DBCC /* 音乐2.mp3 */; };
+		BDFF800926A9450F0080DBCC /* 音乐1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDFF7FAC26A9450E0080DBCC /* 音乐1.mp3 */; };
+		BDFF800A26A9450F0080DBCC /* 乌鸦.caf in Resources */ = {isa = PBXBuildFile; fileRef = BDFF7FAF26A9450E0080DBCC /* 乌鸦.caf */; };
+		BDFF800B26A9450F0080DBCC /* 鼓掌.caf in Resources */ = {isa = PBXBuildFile; fileRef = BDFF7FB126A9450E0080DBCC /* 鼓掌.caf */; };
+		BDFF800C26A9450F0080DBCC /* 尴尬.caf in Resources */ = {isa = PBXBuildFile; fileRef = BDFF7FB326A9450E0080DBCC /* 尴尬.caf */; };
+		BDFF800D26A9450F0080DBCC /* 哈哈哈.caf in Resources */ = {isa = PBXBuildFile; fileRef = BDFF7FB526A9450E0080DBCC /* 哈哈哈.caf */; };
+		BDFF800E26A9450F0080DBCC /* 起哄.caf in Resources */ = {isa = PBXBuildFile; fileRef = BDFF7FB726A9450E0080DBCC /* 起哄.caf */; };
+		BDFF800F26A9450F0080DBCC /* 哇哦.caf in Resources */ = {isa = PBXBuildFile; fileRef = BDFF7FB926A9450E0080DBCC /* 哇哦.caf */; };
+		BDFF801026A9450F0080DBCC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDFF7FBB26A9450E0080DBCC /* Localizable.strings */; };
+		BDFF801126A9450F0080DBCC /* PanoBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7FBF26A9450E0080DBCC /* PanoBaseView.m */; };
+		BDFF801226A9450F0080DBCC /* PanoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7FC026A9450E0080DBCC /* PanoBaseViewController.m */; };
+		BDFF801326A9450F0080DBCC /* PanoBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7FC126A9450E0080DBCC /* PanoBaseService.m */; };
+		BDFF801426A9450F0080DBCC /* PanoSignalService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7FC726A9450E0080DBCC /* PanoSignalService.m */; };
+		BDFF801526A9450F0080DBCC /* PanoClientService+App.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7FC926A9450E0080DBCC /* PanoClientService+App.m */; };
+		BDFF801626A9450F0080DBCC /* PanoUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7FCA26A9450E0080DBCC /* PanoUserService.m */; };
+		BDFF801726A9450F0080DBCC /* PanoAudioService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7FCE26A9450E0080DBCC /* PanoAudioService.m */; };
+		BDFF801826A9450F0080DBCC /* PanoPlayerService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7FD126A9450E0080DBCC /* PanoPlayerService.m */; };
+		BDFF801926A9450F0080DBCC /* PanoClientService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7FD326A9450E0080DBCC /* PanoClientService.m */; };
+		BDFF801A26A9450F0080DBCC /* PanoChatService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7FD426A9450E0080DBCC /* PanoChatService.m */; };
+		BDFF801B26A9450F0080DBCC /* PanoClientService+OpenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7FD626A9450E0080DBCC /* PanoClientService+OpenApi.m */; };
+		BDFF801C26A9450F0080DBCC /* PanoClientConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7FD726A9450E0080DBCC /* PanoClientConfig.m */; };
+		BDFF802326A977550080DBCC /* PanoVoiceTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF802226A977550080DBCC /* PanoVoiceTableController.m */; };
+		BDFF802626A9789F0080DBCC /* PanoFeedAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF802526A9789F0080DBCC /* PanoFeedAudioController.m */; };
+		BDFF802C26A97C1A0080DBCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDFF802B26A97C1A0080DBCC /* Assets.xcassets */; };
+		FE1C284B5377071A2F7953D5 /* libPods-PanoAudioChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC5C905BB317C51AB950306 /* libPods-PanoAudioChat.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BDFF7F2C26A91C100080DBCC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		0BBE50219A6BE427021DE8CD /* Pods_PanoAudioChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PanoAudioChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD1FCE58254A6B2900DE0CDE /* PanoAudioChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PanoAudioChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD1FCE5B254A6B2900DE0CDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD1FCE5F254A6B2900DE0CDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BD1FCE64254A6B2B00DE0CDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BD1FCE67254A6B2B00DE0CDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BD1FCE69254A6B2B00DE0CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD1FCE7A254A6BFD00DE0CDE /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
-		BD1FCE7B254A6BFD00DE0CDE /* PanoHttpUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoHttpUtil.swift; sourceTree = "<group>"; };
-		BD1FCE7D254A6BFD00DE0CDE /* PanoRtc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PanoRtc.framework; sourceTree = "<group>"; };
-		BD1FCE7F254A6BFD00DE0CDE /* PanoUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoUserService.swift; sourceTree = "<group>"; };
-		BD1FCE80254A6BFD00DE0CDE /* PanoAudioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoAudioService.swift; sourceTree = "<group>"; };
-		BD1FCE81254A6BFD00DE0CDE /* PanoBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoBaseService.swift; sourceTree = "<group>"; };
-		BD1FCE82254A6BFD00DE0CDE /* PanoClientService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoClientService.swift; sourceTree = "<group>"; };
-		BD1FCE83254A6BFD00DE0CDE /* PanoServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoServiceManager.swift; sourceTree = "<group>"; };
-		BD1FCE8D254A6C3000DE0CDE /* PanoAudioChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PanoAudioChat-Bridging-Header.h"; sourceTree = "<group>"; };
-		BD1FCE94254A6CBB00DE0CDE /* PanoBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoBaseView.swift; sourceTree = "<group>"; };
-		BD1FCE97254A6D4900DE0CDE /* PanoBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoBaseViewController.swift; sourceTree = "<group>"; };
-		BD1FCE9A254A6D8B00DE0CDE /* PanoBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoBaseNavigationController.swift; sourceTree = "<group>"; };
-		BD1FCE9D254A6DBB00DE0CDE /* PanoHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoHomeViewController.swift; sourceTree = "<group>"; };
-		BD1FCEA0254A6DDA00DE0CDE /* PanoJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoJoinViewController.swift; sourceTree = "<group>"; };
-		BD1FCEB2254A8FD000DE0CDE /* PanoAppDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoAppDefine.swift; sourceTree = "<group>"; };
-		BD1FCEB6254A95D900DE0CDE /* PanoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoTextField.swift; sourceTree = "<group>"; };
-		BD1FCEB8254A9C3000DE0CDE /* PanoAudioRoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoAudioRoomController.swift; sourceTree = "<group>"; };
-		BD1FCEBA254AA1E000DE0CDE /* PanoChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoChatService.swift; sourceTree = "<group>"; };
-		BD1FCEBC254AB6E900DE0CDE /* PanoMessageDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoMessageDefine.swift; sourceTree = "<group>"; };
-		BD1FCEC6254AC9B400DE0CDE /* PanoMicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoMicInfo.swift; sourceTree = "<group>"; };
-		BD1FCECB254ADBB500DE0CDE /* PanoAudioRoomDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoAudioRoomDataSource.swift; sourceTree = "<group>"; };
-		BD1FCED1254AE5A600DE0CDE /* PanoAudioRoomPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoAudioRoomPresenter.swift; sourceTree = "<group>"; };
-		BD1FCED3254AEAFD00DE0CDE /* PanoInviteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoInviteListViewController.swift; sourceTree = "<group>"; };
-		BD3DC425260AD6B800BF844D /* PanoVoiceTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoVoiceTableController.swift; sourceTree = "<group>"; };
-		BD49CC90254BF52400CA30EE /* PanoRoomHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoRoomHeaderView.swift; sourceTree = "<group>"; };
-		BD49CC93254BF52400CA30EE /* PanoMicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoMicButton.swift; sourceTree = "<group>"; };
-		BD49CC94254BF52400CA30EE /* PanoMicCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoMicCollectionCell.swift; sourceTree = "<group>"; };
-		BD49CC95254BF52400CA30EE /* PanoMicQueueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoMicQueueView.swift; sourceTree = "<group>"; };
-		BD49CC9B254BF55600CA30EE /* PanoNaviTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoNaviTitleView.swift; sourceTree = "<group>"; };
-		BD49CCA4254FE68600CA30EE /* PanoUserListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoUserListHeaderView.swift; sourceTree = "<group>"; };
-		BD49CCA6254FE69200CA30EE /* PanoUserListFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoUserListFooterView.swift; sourceTree = "<group>"; };
-		BD49CCA9254FEBAA00CA30EE /* PanoUserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoUserListCell.swift; sourceTree = "<group>"; };
-		BD49CCAB25502E1300CA30EE /* PanoAlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoAlertHelper.swift; sourceTree = "<group>"; };
-		BD49CCB32550FD9700CA30EE /* PanoApplyUserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoApplyUserListView.swift; sourceTree = "<group>"; };
-		BD49CCB72551059600CA30EE /* PanoApplyUserListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoApplyUserListCell.swift; sourceTree = "<group>"; };
-		BD49CCB925510A0700CA30EE /* PanoApplyAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoApplyAlertView.swift; sourceTree = "<group>"; };
-		BD49CCBB25511B5900CA30EE /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		BD49CCBD25515E4100CA30EE /* PanoMyApplyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoMyApplyView.swift; sourceTree = "<group>"; };
-		BD49CCBF255163FA00CA30EE /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		BD49CCC62551922F00CA30EE /* PanoPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoPlayerService.swift; sourceTree = "<group>"; };
-		BD49CCC925519A1C00CA30EE /* PanoSoundEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoSoundEffectView.swift; sourceTree = "<group>"; };
-		BD49CCCB2552391A00CA30EE /* PanoChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoChatView.swift; sourceTree = "<group>"; };
-		BD49CCCD2552394200CA30EE /* PanoChatTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoChatTextCell.swift; sourceTree = "<group>"; };
-		BD49CCCF255241BD00CA30EE /* PanoAudioPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoAudioPanelView.swift; sourceTree = "<group>"; };
-		BD49CCD12552423C00CA30EE /* PanoAudioPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoAudioPlayerView.swift; sourceTree = "<group>"; };
-		BD49CCD325524B8C00CA30EE /* PanoAudioVolume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoAudioVolume.swift; sourceTree = "<group>"; };
-		BD49CCD52552A59D00CA30EE /* 音乐3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "音乐3.mp3"; sourceTree = "<group>"; };
-		BD49CCD62552A59D00CA30EE /* 音乐2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "音乐2.mp3"; sourceTree = "<group>"; };
-		BD49CCD72552A59E00CA30EE /* 音乐1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "音乐1.mp3"; sourceTree = "<group>"; };
-		BD49CCDD2552A5EA00CA30EE /* 乌鸦.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "乌鸦.caf"; sourceTree = "<group>"; };
-		BD49CCDF2552A5EA00CA30EE /* 鼓掌.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "鼓掌.caf"; sourceTree = "<group>"; };
-		BD49CCE12552A5EA00CA30EE /* 尴尬.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "尴尬.caf"; sourceTree = "<group>"; };
-		BD49CCE32552A5EA00CA30EE /* 哈哈哈.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "哈哈哈.caf"; sourceTree = "<group>"; };
-		BD49CCE52552A5EA00CA30EE /* 起哄.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "起哄.caf"; sourceTree = "<group>"; };
-		BD49CCE72552A5EA00CA30EE /* 哇哦.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "哇哦.caf"; sourceTree = "<group>"; };
-		BD49CCEF2552CFC600CA30EE /* PanoEarMonitoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoEarMonitoring.swift; sourceTree = "<group>"; };
-		BD49CCF12552E28600CA30EE /* PanoChatInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoChatInputView.swift; sourceTree = "<group>"; };
-		BD49CCFE2553A2C200CA30EE /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
-		BD49CCFF2553A2C200CA30EE /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
-		BD49CD012553A30900CA30EE /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
-		BD49CD022553A30900CA30EE /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
-		BD681C9726733D0A00C73AC1 /* PanoClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoClientInterface.swift; sourceTree = "<group>"; };
-		BD681C9926733D5A00C73AC1 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
-		BD681C9B26733E4D00C73AC1 /* PanoClientService+ResutfulAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PanoClientService+ResutfulAPI.swift"; sourceTree = "<group>"; };
-		BD681CB426734BA600C73AC1 /* PanoClientService+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PanoClientService+App.swift"; sourceTree = "<group>"; };
-		BD681CB62673540700C73AC1 /* PanoClientService+OpenApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PanoClientService+OpenApi.swift"; sourceTree = "<group>"; };
-		BD681CBA267369CE00C73AC1 /* PanoSignalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoSignalService.swift; sourceTree = "<group>"; };
-		BD8A30082563743800B03474 /* PanoFeedAudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoFeedAudioController.swift; sourceTree = "<group>"; };
-		BD977F432554DB0C00352FA4 /* PanoNaviBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoNaviBadgeView.swift; sourceTree = "<group>"; };
-		BDD402BC25621B3F0027D089 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		BDD402C925621C150027D089 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		BDD402CB25621C190027D089 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		BDD402CD25622E7F0027D089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setting.storyboard; sourceTree = "<group>"; };
-		BDD402D025622E840027D089 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Setting.strings; sourceTree = "<group>"; };
-		BDD402D225622E850027D089 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Setting.strings"; sourceTree = "<group>"; };
-		BDD402D4256252770027D089 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		27A33F8EA87F6B239AB0BE9F /* Pods-PanoAudioChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanoAudioChat.release.xcconfig"; path = "Target Support Files/Pods-PanoAudioChat/Pods-PanoAudioChat.release.xcconfig"; sourceTree = "<group>"; };
+		4BC5C905BB317C51AB950306 /* libPods-PanoAudioChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PanoAudioChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDFF7C4F26A8042E0080DBCC /* PanoAudioChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PanoAudioChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDFF7C5226A8042E0080DBCC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BDFF7C5326A8042E0080DBCC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BDFF7C5C26A8042E0080DBCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BDFF7C6126A804320080DBCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDFF7C6326A804320080DBCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDFF7C6426A804320080DBCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BDFF7DBB26A817D80080DBCC /* PanoHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoHomeViewController.h; sourceTree = "<group>"; };
+		BDFF7DBC26A817D80080DBCC /* PanoTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoTextField.m; sourceTree = "<group>"; };
+		BDFF7DBD26A817D80080DBCC /* PanoHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoHomeViewController.m; sourceTree = "<group>"; };
+		BDFF7DBE26A817D80080DBCC /* PanoJoinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoJoinViewController.h; sourceTree = "<group>"; };
+		BDFF7DBF26A817D80080DBCC /* PanoJoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoJoinViewController.m; sourceTree = "<group>"; };
+		BDFF7DC026A817D80080DBCC /* PanoTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoTextField.h; sourceTree = "<group>"; };
+		BDFF7F3A26A9450E0080DBCC /* AppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
+		BDFF7F3B26A9450E0080DBCC /* PanoInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoInterface.m; sourceTree = "<group>"; };
+		BDFF7F3F26A9450E0080DBCC /* PanoInviteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoInviteListViewController.h; sourceTree = "<group>"; };
+		BDFF7F4226A9450E0080DBCC /* PanoUserListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoUserListCell.h; sourceTree = "<group>"; };
+		BDFF7F4326A9450E0080DBCC /* PanoUserListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoUserListCell.m; sourceTree = "<group>"; };
+		BDFF7F4426A9450E0080DBCC /* PanoInviteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoInviteListViewController.m; sourceTree = "<group>"; };
+		BDFF7F4626A9450E0080DBCC /* PanoAudioRoomPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoAudioRoomPresenter.m; sourceTree = "<group>"; };
+		BDFF7F4726A9450E0080DBCC /* PanoAudioRoomController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoAudioRoomController.m; sourceTree = "<group>"; };
+		BDFF7F4826A9450E0080DBCC /* PanoAudioRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoAudioRoomController.h; sourceTree = "<group>"; };
+		BDFF7F4B26A9450E0080DBCC /* PanoChatInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoChatInputView.h; sourceTree = "<group>"; };
+		BDFF7F4C26A9450E0080DBCC /* PanoChatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoChatView.h; sourceTree = "<group>"; };
+		BDFF7F4D26A9450E0080DBCC /* PanoChatTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoChatTextCell.m; sourceTree = "<group>"; };
+		BDFF7F4E26A9450E0080DBCC /* PanoChatInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoChatInputView.m; sourceTree = "<group>"; };
+		BDFF7F4F26A9450E0080DBCC /* PanoChatTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoChatTextCell.h; sourceTree = "<group>"; };
+		BDFF7F5026A9450E0080DBCC /* PanoChatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoChatView.m; sourceTree = "<group>"; };
+		BDFF7F5226A9450E0080DBCC /* PanoMicCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoMicCollectionCell.m; sourceTree = "<group>"; };
+		BDFF7F5326A9450E0080DBCC /* PanoMicButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoMicButton.m; sourceTree = "<group>"; };
+		BDFF7F5426A9450E0080DBCC /* PanoMicQueueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoMicQueueView.h; sourceTree = "<group>"; };
+		BDFF7F5526A9450E0080DBCC /* PanoMicCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoMicCollectionCell.h; sourceTree = "<group>"; };
+		BDFF7F5626A9450E0080DBCC /* PanoMicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoMicButton.h; sourceTree = "<group>"; };
+		BDFF7F5726A9450E0080DBCC /* PanoMicQueueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoMicQueueView.m; sourceTree = "<group>"; };
+		BDFF7F5926A9450E0080DBCC /* PanoApplyAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoApplyAlertView.h; sourceTree = "<group>"; };
+		BDFF7F5A26A9450E0080DBCC /* PanoApplyUserListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoApplyUserListCell.h; sourceTree = "<group>"; };
+		BDFF7F5B26A9450E0080DBCC /* PanoApplyUserListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoApplyUserListView.h; sourceTree = "<group>"; };
+		BDFF7F5C26A9450E0080DBCC /* PanoMyApplyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoMyApplyView.m; sourceTree = "<group>"; };
+		BDFF7F5D26A9450E0080DBCC /* PanoApplyAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoApplyAlertView.m; sourceTree = "<group>"; };
+		BDFF7F5E26A9450E0080DBCC /* PanoApplyUserListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoApplyUserListCell.m; sourceTree = "<group>"; };
+		BDFF7F5F26A9450E0080DBCC /* PanoMyApplyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoMyApplyView.h; sourceTree = "<group>"; };
+		BDFF7F6026A9450E0080DBCC /* PanoApplyUserListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoApplyUserListView.m; sourceTree = "<group>"; };
+		BDFF7F6226A9450E0080DBCC /* PanoRoomHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoRoomHeaderView.h; sourceTree = "<group>"; };
+		BDFF7F6326A9450E0080DBCC /* PanoRoomHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoRoomHeaderView.m; sourceTree = "<group>"; };
+		BDFF7F6526A9450E0080DBCC /* PanoEarMonitoring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoEarMonitoring.h; sourceTree = "<group>"; };
+		BDFF7F6626A9450E0080DBCC /* PanoEarMonitoring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoEarMonitoring.m; sourceTree = "<group>"; };
+		BDFF7F6826A9450E0080DBCC /* PanoNaviTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoNaviTitleView.m; sourceTree = "<group>"; };
+		BDFF7F6926A9450E0080DBCC /* PanoNaviBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoNaviBadgeView.m; sourceTree = "<group>"; };
+		BDFF7F6A26A9450E0080DBCC /* PanoNaviTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoNaviTitleView.h; sourceTree = "<group>"; };
+		BDFF7F6B26A9450E0080DBCC /* PanoNaviBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoNaviBadgeView.h; sourceTree = "<group>"; };
+		BDFF7F6D26A9450E0080DBCC /* PanoAudioVolume.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoAudioVolume.m; sourceTree = "<group>"; };
+		BDFF7F6E26A9450E0080DBCC /* PanoAudioPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoAudioPlayerView.h; sourceTree = "<group>"; };
+		BDFF7F6F26A9450E0080DBCC /* PanoAudioPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoAudioPanelView.m; sourceTree = "<group>"; };
+		BDFF7F7026A9450E0080DBCC /* PanoAudioVolume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoAudioVolume.h; sourceTree = "<group>"; };
+		BDFF7F7126A9450E0080DBCC /* PanoAudioPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoAudioPlayerView.m; sourceTree = "<group>"; };
+		BDFF7F7226A9450E0080DBCC /* PanoAudioPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoAudioPanelView.h; sourceTree = "<group>"; };
+		BDFF7F7326A9450E0080DBCC /* PanoAudioRoomPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoAudioRoomPresenter.h; sourceTree = "<group>"; };
+		BDFF7F7526A9450E0080DBCC /* PanoAudioRoomDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoAudioRoomDataSource.m; sourceTree = "<group>"; };
+		BDFF7F7626A9450E0080DBCC /* PanoAudioRoomDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoAudioRoomDataSource.h; sourceTree = "<group>"; };
+		BDFF7F7926A9450E0080DBCC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Setting.strings"; sourceTree = "<group>"; };
+		BDFF7F7A26A9450E0080DBCC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Setting.strings; sourceTree = "<group>"; };
+		BDFF7F7C26A9450E0080DBCC /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		BDFF7F7D26A9450E0080DBCC /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		BDFF7F7F26A9450E0080DBCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setting.storyboard; sourceTree = "<group>"; };
+		BDFF7F8126A9450E0080DBCC /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		BDFF7F8226A9450E0080DBCC /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		BDFF7F8426A9450E0080DBCC /* PanoAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoAction.m; sourceTree = "<group>"; };
+		BDFF7F8526A9450E0080DBCC /* PanoAvatorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoAvatorUtil.h; sourceTree = "<group>"; };
+		BDFF7F8626A9450E0080DBCC /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		BDFF7F8726A9450E0080DBCC /* MBProgressHUD+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Extension.h"; sourceTree = "<group>"; };
+		BDFF7F8826A9450E0080DBCC /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		BDFF7F8926A9450E0080DBCC /* PanoMulticastDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoMulticastDelegate.h; sourceTree = "<group>"; };
+		BDFF7F8A26A9450E0080DBCC /* PanoMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoMenuCell.m; sourceTree = "<group>"; };
+		BDFF7F8B26A9450E0080DBCC /* PanoArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoArrayDataSource.m; sourceTree = "<group>"; };
+		BDFF7F8C26A9450E0080DBCC /* PanoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoItem.m; sourceTree = "<group>"; };
+		BDFF7F8D26A9450E0080DBCC /* PanoAvatorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoAvatorUtil.m; sourceTree = "<group>"; };
+		BDFF7F8E26A9450E0080DBCC /* PanoAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoAction.h; sourceTree = "<group>"; };
+		BDFF7F8F26A9450E0080DBCC /* PanoItemDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoItemDelegate.h; sourceTree = "<group>"; };
+		BDFF7F9026A9450E0080DBCC /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		BDFF7F9226A9450E0080DBCC /* PanoMulticastDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoMulticastDelegate.m; sourceTree = "<group>"; };
+		BDFF7F9326A9450E0080DBCC /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		BDFF7F9426A9450E0080DBCC /* MBProgressHUD+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Extension.m"; sourceTree = "<group>"; };
+		BDFF7F9526A9450E0080DBCC /* PanoDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoDefine.h; sourceTree = "<group>"; };
+		BDFF7F9626A9450E0080DBCC /* PanoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoItem.h; sourceTree = "<group>"; };
+		BDFF7F9726A9450E0080DBCC /* PanoArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoArrayDataSource.h; sourceTree = "<group>"; };
+		BDFF7F9826A9450E0080DBCC /* PanoMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoMenuCell.h; sourceTree = "<group>"; };
+		BDFF7F9A26A9450E0080DBCC /* PanoTextViewInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoTextViewInternal.m; sourceTree = "<group>"; };
+		BDFF7F9B26A9450E0080DBCC /* PanoGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoGrowingTextView.h; sourceTree = "<group>"; };
+		BDFF7F9C26A9450E0080DBCC /* PanoTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoTextViewInternal.h; sourceTree = "<group>"; };
+		BDFF7F9D26A9450E0080DBCC /* PanoGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoGrowingTextView.m; sourceTree = "<group>"; };
+		BDFF7F9F26A9450E0080DBCC /* PanoMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoMessage.m; sourceTree = "<group>"; };
+		BDFF7FA026A9450E0080DBCC /* PanoMicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoMicInfo.h; sourceTree = "<group>"; };
+		BDFF7FA126A9450E0080DBCC /* PanoMessageEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoMessageEnum.h; sourceTree = "<group>"; };
+		BDFF7FA226A9450E0080DBCC /* PanoUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoUserInfo.m; sourceTree = "<group>"; };
+		BDFF7FA326A9450E0080DBCC /* PanoMessageDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoMessageDefine.h; sourceTree = "<group>"; };
+		BDFF7FA426A9450E0080DBCC /* PanoMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoMessage.h; sourceTree = "<group>"; };
+		BDFF7FA526A9450E0080DBCC /* PanoMicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoMicInfo.m; sourceTree = "<group>"; };
+		BDFF7FA626A9450E0080DBCC /* PanoUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoUserInfo.h; sourceTree = "<group>"; };
+		BDFF7FA726A9450E0080DBCC /* PanoMessageDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoMessageDefine.m; sourceTree = "<group>"; };
+		BDFF7FAA26A9450E0080DBCC /* 音乐3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "音乐3.mp3"; sourceTree = "<group>"; };
+		BDFF7FAB26A9450E0080DBCC /* 音乐2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "音乐2.mp3"; sourceTree = "<group>"; };
+		BDFF7FAC26A9450E0080DBCC /* 音乐1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "音乐1.mp3"; sourceTree = "<group>"; };
+		BDFF7FAF26A9450E0080DBCC /* 乌鸦.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "乌鸦.caf"; sourceTree = "<group>"; };
+		BDFF7FB126A9450E0080DBCC /* 鼓掌.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "鼓掌.caf"; sourceTree = "<group>"; };
+		BDFF7FB326A9450E0080DBCC /* 尴尬.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "尴尬.caf"; sourceTree = "<group>"; };
+		BDFF7FB526A9450E0080DBCC /* 哈哈哈.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "哈哈哈.caf"; sourceTree = "<group>"; };
+		BDFF7FB726A9450E0080DBCC /* 起哄.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "起哄.caf"; sourceTree = "<group>"; };
+		BDFF7FB926A9450E0080DBCC /* 哇哦.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "哇哦.caf"; sourceTree = "<group>"; };
+		BDFF7FBC26A9450E0080DBCC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BDFF7FBD26A9450E0080DBCC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BDFF7FBF26A9450E0080DBCC /* PanoBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoBaseView.m; sourceTree = "<group>"; };
+		BDFF7FC026A9450E0080DBCC /* PanoBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoBaseViewController.m; sourceTree = "<group>"; };
+		BDFF7FC126A9450E0080DBCC /* PanoBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoBaseService.m; sourceTree = "<group>"; };
+		BDFF7FC226A9450E0080DBCC /* PanoBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoBaseViewController.h; sourceTree = "<group>"; };
+		BDFF7FC326A9450E0080DBCC /* PanoBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoBaseView.h; sourceTree = "<group>"; };
+		BDFF7FC426A9450E0080DBCC /* PanoBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoBaseService.h; sourceTree = "<group>"; };
+		BDFF7FC626A9450E0080DBCC /* PanoSignalInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoSignalInterface.h; sourceTree = "<group>"; };
+		BDFF7FC726A9450E0080DBCC /* PanoSignalService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoSignalService.m; sourceTree = "<group>"; };
+		BDFF7FC826A9450E0080DBCC /* PanoPlayerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoPlayerService.h; sourceTree = "<group>"; };
+		BDFF7FC926A9450E0080DBCC /* PanoClientService+App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PanoClientService+App.m"; sourceTree = "<group>"; };
+		BDFF7FCA26A9450E0080DBCC /* PanoUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoUserService.m; sourceTree = "<group>"; };
+		BDFF7FCB26A9450E0080DBCC /* PanoChatService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoChatService.h; sourceTree = "<group>"; };
+		BDFF7FCC26A9450E0080DBCC /* PanoClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoClientService.h; sourceTree = "<group>"; };
+		BDFF7FCD26A9450E0080DBCC /* PanoClientService+OpenApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PanoClientService+OpenApi.h"; sourceTree = "<group>"; };
+		BDFF7FCE26A9450E0080DBCC /* PanoAudioService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoAudioService.m; sourceTree = "<group>"; };
+		BDFF7FCF26A9450E0080DBCC /* PanoUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoUserService.h; sourceTree = "<group>"; };
+		BDFF7FD026A9450E0080DBCC /* PanoClientService+App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PanoClientService+App.h"; sourceTree = "<group>"; };
+		BDFF7FD126A9450E0080DBCC /* PanoPlayerService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoPlayerService.m; sourceTree = "<group>"; };
+		BDFF7FD226A9450E0080DBCC /* PanoSignalService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoSignalService.h; sourceTree = "<group>"; };
+		BDFF7FD326A9450E0080DBCC /* PanoClientService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoClientService.m; sourceTree = "<group>"; };
+		BDFF7FD426A9450E0080DBCC /* PanoChatService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoChatService.m; sourceTree = "<group>"; };
+		BDFF7FD526A9450E0080DBCC /* PanoAudioService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoAudioService.h; sourceTree = "<group>"; };
+		BDFF7FD626A9450E0080DBCC /* PanoClientService+OpenApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PanoClientService+OpenApi.m"; sourceTree = "<group>"; };
+		BDFF7FD726A9450E0080DBCC /* PanoClientConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoClientConfig.m; sourceTree = "<group>"; };
+		BDFF7FD826A9450E0080DBCC /* PanoInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoInterface.h; sourceTree = "<group>"; };
+		BDFF7FD926A9450E0080DBCC /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		BDFF7FDA26A9450E0080DBCC /* PanoClientConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoClientConfig.h; sourceTree = "<group>"; };
+		BDFF802126A977550080DBCC /* PanoVoiceTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanoVoiceTableController.h; sourceTree = "<group>"; };
+		BDFF802226A977550080DBCC /* PanoVoiceTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanoVoiceTableController.m; sourceTree = "<group>"; };
+		BDFF802426A9789F0080DBCC /* PanoFeedAudioController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanoFeedAudioController.h; sourceTree = "<group>"; };
+		BDFF802526A9789F0080DBCC /* PanoFeedAudioController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanoFeedAudioController.m; sourceTree = "<group>"; };
+		BDFF802B26A97C1A0080DBCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D208B225937150E3ACAF9844 /* Pods-PanoAudioChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanoAudioChat.debug.xcconfig"; path = "Target Support Files/Pods-PanoAudioChat/Pods-PanoAudioChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BD1FCE55254A6B2900DE0CDE /* Frameworks */ = {
+		BDFF7C4C26A8042E0080DBCC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				589F9609BB550E2D7F9E4131 /* Pods_PanoAudioChat.framework in Frameworks */,
+				FE1C284B5377071A2F7953D5 /* libPods-PanoAudioChat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5F394A5F4CC70A24CBDDD7A2 /* Frameworks */ = {
+		01ED40B5FD59F4EF75A70F41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0BBE50219A6BE427021DE8CD /* Pods_PanoAudioChat.framework */,
+				4BC5C905BB317C51AB950306 /* libPods-PanoAudioChat.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BD1FCE4F254A6B2900DE0CDE = {
+		78FAF02F13220EC12E9B7078 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BD1FCE5A254A6B2900DE0CDE /* PanoAudioChat */,
-				BD1FCE59254A6B2900DE0CDE /* Products */,
-				5F394A5F4CC70A24CBDDD7A2 /* Frameworks */,
+				D208B225937150E3ACAF9844 /* Pods-PanoAudioChat.debug.xcconfig */,
+				27A33F8EA87F6B239AB0BE9F /* Pods-PanoAudioChat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BDFF7C4626A8042E0080DBCC = {
+			isa = PBXGroup;
+			children = (
+				BDFF7C5126A8042E0080DBCC /* PanoAudioChat */,
+				BDFF7C5026A8042E0080DBCC /* Products */,
+				78FAF02F13220EC12E9B7078 /* Pods */,
+				01ED40B5FD59F4EF75A70F41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		BD1FCE59254A6B2900DE0CDE /* Products */ = {
+		BDFF7C5026A8042E0080DBCC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD1FCE58254A6B2900DE0CDE /* PanoAudioChat.app */,
+				BDFF7C4F26A8042E0080DBCC /* PanoAudioChat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BD1FCE5A254A6B2900DE0CDE /* PanoAudioChat */ = {
+		BDFF7C5126A8042E0080DBCC /* PanoAudioChat */ = {
 			isa = PBXGroup;
 			children = (
-				BD1FCE72254A6BFD00DE0CDE /* Classes */,
-				BD1FCE5B254A6B2900DE0CDE /* AppDelegate.swift */,
-				BD1FCE5F254A6B2900DE0CDE /* ViewController.swift */,
-				BD1FCE64254A6B2B00DE0CDE /* Assets.xcassets */,
-				BD1FCE66254A6B2B00DE0CDE /* LaunchScreen.storyboard */,
-				BD1FCE69254A6B2B00DE0CDE /* Info.plist */,
-				BD1FCE8D254A6C3000DE0CDE /* PanoAudioChat-Bridging-Header.h */,
+				BDFF7F3926A9450E0080DBCC /* PanoAudioChatSDK */,
+				BDFF7C5226A8042E0080DBCC /* AppDelegate.h */,
+				BDFF7C5326A8042E0080DBCC /* AppDelegate.m */,
+				BDFF802B26A97C1A0080DBCC /* Assets.xcassets */,
+				BDFF7C6326A804320080DBCC /* Info.plist */,
+				BDFF7C6026A804320080DBCC /* LaunchScreen.storyboard */,
+				BDFF7C6426A804320080DBCC /* main.m */,
+				BDFF7C5B26A8042E0080DBCC /* Main.storyboard */,
+				BDFF7DBB26A817D80080DBCC /* PanoHomeViewController.h */,
+				BDFF7DBD26A817D80080DBCC /* PanoHomeViewController.m */,
+				BDFF7DBE26A817D80080DBCC /* PanoJoinViewController.h */,
+				BDFF7DBF26A817D80080DBCC /* PanoJoinViewController.m */,
+				BDFF7DC026A817D80080DBCC /* PanoTextField.h */,
+				BDFF7DBC26A817D80080DBCC /* PanoTextField.m */,
 			);
 			path = PanoAudioChat;
 			sourceTree = "<group>";
 		};
-		BD1FCE72254A6BFD00DE0CDE /* Classes */ = {
+		BDFF7F3926A9450E0080DBCC /* PanoAudioChatSDK */ = {
 			isa = PBXGroup;
 			children = (
-				BD681C9626733CEF00C73AC1 /* OpenApi */,
-				BD49CCC22551904E00CA30EE /* Resource */,
-				BD1FCEB1254A8FC300DE0CDE /* Constant */,
-				BD1FCE73254A6BFD00DE0CDE /* Sections */,
-				BD1FCE79254A6BFD00DE0CDE /* Util */,
-				BD1FCE7C254A6BFD00DE0CDE /* Library */,
-				BD1FCE7E254A6BFD00DE0CDE /* Service */,
+				BDFF7FD926A9450E0080DBCC /* AppConfig.h */,
+				BDFF7F3A26A9450E0080DBCC /* AppConfig.m */,
+				BDFF7FDA26A9450E0080DBCC /* PanoClientConfig.h */,
+				BDFF7FD726A9450E0080DBCC /* PanoClientConfig.m */,
+				BDFF7FD826A9450E0080DBCC /* PanoInterface.h */,
+				BDFF7F3B26A9450E0080DBCC /* PanoInterface.m */,
+				BDFF7F3C26A9450E0080DBCC /* Source */,
 			);
-			path = Classes;
+			path = PanoAudioChatSDK;
+			sourceTree = SOURCE_ROOT;
+		};
+		BDFF7F3C26A9450E0080DBCC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7FBE26A9450E0080DBCC /* Base */,
+				BDFF7F8326A9450E0080DBCC /* Common */,
+				BDFF7F9E26A9450E0080DBCC /* Model */,
+				BDFF7FA826A9450E0080DBCC /* Resource */,
+				BDFF7F3D26A9450E0080DBCC /* Sections */,
+				BDFF7FC526A9450E0080DBCC /* Services */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
-		BD1FCE73254A6BFD00DE0CDE /* Sections */ = {
+		BDFF7F3D26A9450E0080DBCC /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				BD49CC9D254FA0EF00CA30EE /* Setting */,
-				BD1FCE74254A6BFD00DE0CDE /* HomePage */,
-				BD1FCE75254A6BFD00DE0CDE /* UserList */,
-				BD1FCE77254A6BFD00DE0CDE /* AudioRoom */,
-				BD1FCE94254A6CBB00DE0CDE /* PanoBaseView.swift */,
-				BD1FCE97254A6D4900DE0CDE /* PanoBaseViewController.swift */,
-				BD1FCE9A254A6D8B00DE0CDE /* PanoBaseNavigationController.swift */,
+				BDFF7F4526A9450E0080DBCC /* AudioRoom */,
+				BDFF7F7726A9450E0080DBCC /* Setting */,
+				BDFF7F3E26A9450E0080DBCC /* UserList */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
 		};
-		BD1FCE74254A6BFD00DE0CDE /* HomePage */ = {
+		BDFF7F3E26A9450E0080DBCC /* UserList */ = {
 			isa = PBXGroup;
 			children = (
-				BD1FCE9D254A6DBB00DE0CDE /* PanoHomeViewController.swift */,
-				BD1FCEA0254A6DDA00DE0CDE /* PanoJoinViewController.swift */,
-				BD1FCEB6254A95D900DE0CDE /* PanoTextField.swift */,
-			);
-			path = HomePage;
-			sourceTree = "<group>";
-		};
-		BD1FCE75254A6BFD00DE0CDE /* UserList */ = {
-			isa = PBXGroup;
-			children = (
-				BD49CCA1254FE64200CA30EE /* View */,
-				BD1FCED3254AEAFD00DE0CDE /* PanoInviteListViewController.swift */,
+				BDFF7F3F26A9450E0080DBCC /* PanoInviteListViewController.h */,
+				BDFF7F4426A9450E0080DBCC /* PanoInviteListViewController.m */,
+				BDFF7F4026A9450E0080DBCC /* VIew */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
 		};
-		BD1FCE77254A6BFD00DE0CDE /* AudioRoom */ = {
+		BDFF7F4026A9450E0080DBCC /* VIew */ = {
 			isa = PBXGroup;
 			children = (
-				BD1FCECE254AE1CC00DE0CDE /* View */,
-				BD1FCECA254ADB9E00DE0CDE /* Data */,
-				BD1FCEC5254AC99900DE0CDE /* Model */,
-				BD1FCEB8254A9C3000DE0CDE /* PanoAudioRoomController.swift */,
-				BD1FCED1254AE5A600DE0CDE /* PanoAudioRoomPresenter.swift */,
+				BDFF7F4126A9450E0080DBCC /* Cell */,
 			);
-			path = AudioRoom;
+			path = VIew;
 			sourceTree = "<group>";
 		};
-		BD1FCE79254A6BFD00DE0CDE /* Util */ = {
+		BDFF7F4126A9450E0080DBCC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				BD1FCE7A254A6BFD00DE0CDE /* MulticastDelegate.swift */,
-				BD1FCE7B254A6BFD00DE0CDE /* PanoHttpUtil.swift */,
-				BD49CCAB25502E1300CA30EE /* PanoAlertHelper.swift */,
-				BD49CCBB25511B5900CA30EE /* ColorExtension.swift */,
-				BD49CCBF255163FA00CA30EE /* UIViewExtension.swift */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
-		BD1FCE7C254A6BFD00DE0CDE /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				BD1FCE7D254A6BFD00DE0CDE /* PanoRtc.framework */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
-		BD1FCE7E254A6BFD00DE0CDE /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				BD1FCE7F254A6BFD00DE0CDE /* PanoUserService.swift */,
-				BD1FCE80254A6BFD00DE0CDE /* PanoAudioService.swift */,
-				BD1FCE81254A6BFD00DE0CDE /* PanoBaseService.swift */,
-				BD1FCE82254A6BFD00DE0CDE /* PanoClientService.swift */,
-				BD681CB62673540700C73AC1 /* PanoClientService+OpenApi.swift */,
-				BD681C9B26733E4D00C73AC1 /* PanoClientService+ResutfulAPI.swift */,
-				BD681CB426734BA600C73AC1 /* PanoClientService+App.swift */,
-				BD681CBA267369CE00C73AC1 /* PanoSignalService.swift */,
-				BD1FCE83254A6BFD00DE0CDE /* PanoServiceManager.swift */,
-				BD1FCEBA254AA1E000DE0CDE /* PanoChatService.swift */,
-				BD49CCC62551922F00CA30EE /* PanoPlayerService.swift */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		BD1FCEB1254A8FC300DE0CDE /* Constant */ = {
-			isa = PBXGroup;
-			children = (
-				BD1FCEB2254A8FD000DE0CDE /* PanoAppDefine.swift */,
-				BD1FCEBC254AB6E900DE0CDE /* PanoMessageDefine.swift */,
-			);
-			path = Constant;
-			sourceTree = "<group>";
-		};
-		BD1FCEC5254AC99900DE0CDE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BD1FCEC6254AC9B400DE0CDE /* PanoMicInfo.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BD1FCECA254ADB9E00DE0CDE /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				BD1FCECB254ADBB500DE0CDE /* PanoAudioRoomDataSource.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		BD1FCECE254AE1CC00DE0CDE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BD49CCEE2552CFB600CA30EE /* EarMonitoring */,
-				BD49CCC8255199A600CA30EE /* Player */,
-				BD49CCA0254FD59300CA30EE /* ApplyUserList */,
-				BD49CC91254BF52400CA30EE /* Chat */,
-				BD49CC8F254BF52400CA30EE /* HeaderView */,
-				BD49CC92254BF52400CA30EE /* MicQueueView */,
-				BD49CC96254BF52400CA30EE /* Nav */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BD49CC8F254BF52400CA30EE /* HeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				BD49CC90254BF52400CA30EE /* PanoRoomHeaderView.swift */,
-			);
-			path = HeaderView;
-			sourceTree = "<group>";
-		};
-		BD49CC91254BF52400CA30EE /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-				BD49CCCB2552391A00CA30EE /* PanoChatView.swift */,
-				BD49CCCD2552394200CA30EE /* PanoChatTextCell.swift */,
-				BD49CCF12552E28600CA30EE /* PanoChatInputView.swift */,
-			);
-			path = Chat;
-			sourceTree = "<group>";
-		};
-		BD49CC92254BF52400CA30EE /* MicQueueView */ = {
-			isa = PBXGroup;
-			children = (
-				BD49CC93254BF52400CA30EE /* PanoMicButton.swift */,
-				BD49CC94254BF52400CA30EE /* PanoMicCollectionCell.swift */,
-				BD49CC95254BF52400CA30EE /* PanoMicQueueView.swift */,
-			);
-			path = MicQueueView;
-			sourceTree = "<group>";
-		};
-		BD49CC96254BF52400CA30EE /* Nav */ = {
-			isa = PBXGroup;
-			children = (
-				BD49CC9B254BF55600CA30EE /* PanoNaviTitleView.swift */,
-				BD977F432554DB0C00352FA4 /* PanoNaviBadgeView.swift */,
-			);
-			path = Nav;
-			sourceTree = "<group>";
-		};
-		BD49CC9D254FA0EF00CA30EE /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				BD3DC425260AD6B800BF844D /* PanoVoiceTableController.swift */,
-				BD8A30082563743800B03474 /* PanoFeedAudioController.swift */,
-				BD49CD022553A30900CA30EE /* SettingTableViewController.h */,
-				BD49CD012553A30900CA30EE /* SettingTableViewController.m */,
-				BD49CCFE2553A2C200CA30EE /* FeedbackViewController.h */,
-				BD49CCFF2553A2C200CA30EE /* FeedbackViewController.m */,
-				BDD402CE25622E7F0027D089 /* Setting.storyboard */,
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
-		BD49CCA0254FD59300CA30EE /* ApplyUserList */ = {
-			isa = PBXGroup;
-			children = (
-				BD49CCB32550FD9700CA30EE /* PanoApplyUserListView.swift */,
-				BD49CCB72551059600CA30EE /* PanoApplyUserListCell.swift */,
-				BD49CCB925510A0700CA30EE /* PanoApplyAlertView.swift */,
-				BD49CCBD25515E4100CA30EE /* PanoMyApplyView.swift */,
-			);
-			path = ApplyUserList;
-			sourceTree = "<group>";
-		};
-		BD49CCA1254FE64200CA30EE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BD49CCA8254FEB6400CA30EE /* Cell */,
-				BD49CCA3254FE65900CA30EE /* FooterView */,
-				BD49CCA2254FE64D00CA30EE /* HeaderView */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BD49CCA2254FE64D00CA30EE /* HeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				BD49CCA4254FE68600CA30EE /* PanoUserListHeaderView.swift */,
-			);
-			path = HeaderView;
-			sourceTree = "<group>";
-		};
-		BD49CCA3254FE65900CA30EE /* FooterView */ = {
-			isa = PBXGroup;
-			children = (
-				BD49CCA6254FE69200CA30EE /* PanoUserListFooterView.swift */,
-			);
-			path = FooterView;
-			sourceTree = "<group>";
-		};
-		BD49CCA8254FEB6400CA30EE /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				BD49CCA9254FEBAA00CA30EE /* PanoUserListCell.swift */,
+				BDFF7F4226A9450E0080DBCC /* PanoUserListCell.h */,
+				BDFF7F4326A9450E0080DBCC /* PanoUserListCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		BD49CCC22551904E00CA30EE /* Resource */ = {
+		BDFF7F4526A9450E0080DBCC /* AudioRoom */ = {
 			isa = PBXGroup;
 			children = (
-				BDD402C525621C010027D089 /* Localizable */,
-				BD49CCC32551905700CA30EE /* Audio */,
+				BDFF7F7426A9450E0080DBCC /* data */,
+				BDFF7F4826A9450E0080DBCC /* PanoAudioRoomController.h */,
+				BDFF7F4726A9450E0080DBCC /* PanoAudioRoomController.m */,
+				BDFF7F7326A9450E0080DBCC /* PanoAudioRoomPresenter.h */,
+				BDFF7F4626A9450E0080DBCC /* PanoAudioRoomPresenter.m */,
+				BDFF7F4926A9450E0080DBCC /* View */,
 			);
-			path = Resource;
+			path = AudioRoom;
 			sourceTree = "<group>";
 		};
-		BD49CCC32551905700CA30EE /* Audio */ = {
+		BDFF7F4926A9450E0080DBCC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BD49CCDB2552A5EA00CA30EE /* demo声效 */,
-				BD49CCD72552A59E00CA30EE /* 音乐1.mp3 */,
-				BD49CCD62552A59D00CA30EE /* 音乐2.mp3 */,
-				BD49CCD52552A59D00CA30EE /* 音乐3.mp3 */,
+				BDFF7F5826A9450E0080DBCC /* ApplyUserList */,
+				BDFF7F4A26A9450E0080DBCC /* Chat */,
+				BDFF7F6426A9450E0080DBCC /* EarMonitoring */,
+				BDFF7F6126A9450E0080DBCC /* HeaderView */,
+				BDFF7F5126A9450E0080DBCC /* MicQueueView */,
+				BDFF7F6726A9450E0080DBCC /* Nav */,
+				BDFF7F6C26A9450E0080DBCC /* Player */,
 			);
-			path = Audio;
+			path = View;
 			sourceTree = "<group>";
 		};
-		BD49CCC8255199A600CA30EE /* Player */ = {
+		BDFF7F4A26A9450E0080DBCC /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				BD49CCC925519A1C00CA30EE /* PanoSoundEffectView.swift */,
-				BD49CCD325524B8C00CA30EE /* PanoAudioVolume.swift */,
-				BD49CCCF255241BD00CA30EE /* PanoAudioPanelView.swift */,
-				BD49CCD12552423C00CA30EE /* PanoAudioPlayerView.swift */,
+				BDFF7F4B26A9450E0080DBCC /* PanoChatInputView.h */,
+				BDFF7F4E26A9450E0080DBCC /* PanoChatInputView.m */,
+				BDFF7F4F26A9450E0080DBCC /* PanoChatTextCell.h */,
+				BDFF7F4D26A9450E0080DBCC /* PanoChatTextCell.m */,
+				BDFF7F4C26A9450E0080DBCC /* PanoChatView.h */,
+				BDFF7F5026A9450E0080DBCC /* PanoChatView.m */,
 			);
-			path = Player;
+			path = Chat;
 			sourceTree = "<group>";
 		};
-		BD49CCDB2552A5EA00CA30EE /* demo声效 */ = {
+		BDFF7F5126A9450E0080DBCC /* MicQueueView */ = {
 			isa = PBXGroup;
 			children = (
-				BD49CCDC2552A5EA00CA30EE /* 乌鸦 */,
-				BD49CCDE2552A5EA00CA30EE /* 鼓掌 */,
-				BD49CCE02552A5EA00CA30EE /* 尴尬 */,
-				BD49CCE22552A5EA00CA30EE /* 哈哈哈 */,
-				BD49CCE42552A5EA00CA30EE /* 起哄 */,
-				BD49CCE62552A5EA00CA30EE /* 哇哦 */,
+				BDFF7F5626A9450E0080DBCC /* PanoMicButton.h */,
+				BDFF7F5326A9450E0080DBCC /* PanoMicButton.m */,
+				BDFF7F5526A9450E0080DBCC /* PanoMicCollectionCell.h */,
+				BDFF7F5226A9450E0080DBCC /* PanoMicCollectionCell.m */,
+				BDFF7F5426A9450E0080DBCC /* PanoMicQueueView.h */,
+				BDFF7F5726A9450E0080DBCC /* PanoMicQueueView.m */,
 			);
-			path = "demo声效";
+			path = MicQueueView;
 			sourceTree = "<group>";
 		};
-		BD49CCDC2552A5EA00CA30EE /* 乌鸦 */ = {
+		BDFF7F5826A9450E0080DBCC /* ApplyUserList */ = {
 			isa = PBXGroup;
 			children = (
-				BD49CCDD2552A5EA00CA30EE /* 乌鸦.caf */,
+				BDFF7F5926A9450E0080DBCC /* PanoApplyAlertView.h */,
+				BDFF7F5D26A9450E0080DBCC /* PanoApplyAlertView.m */,
+				BDFF7F5A26A9450E0080DBCC /* PanoApplyUserListCell.h */,
+				BDFF7F5E26A9450E0080DBCC /* PanoApplyUserListCell.m */,
+				BDFF7F5B26A9450E0080DBCC /* PanoApplyUserListView.h */,
+				BDFF7F6026A9450E0080DBCC /* PanoApplyUserListView.m */,
+				BDFF7F5F26A9450E0080DBCC /* PanoMyApplyView.h */,
+				BDFF7F5C26A9450E0080DBCC /* PanoMyApplyView.m */,
 			);
-			path = "乌鸦";
+			path = ApplyUserList;
 			sourceTree = "<group>";
 		};
-		BD49CCDE2552A5EA00CA30EE /* 鼓掌 */ = {
+		BDFF7F6126A9450E0080DBCC /* HeaderView */ = {
 			isa = PBXGroup;
 			children = (
-				BD49CCDF2552A5EA00CA30EE /* 鼓掌.caf */,
+				BDFF7F6226A9450E0080DBCC /* PanoRoomHeaderView.h */,
+				BDFF7F6326A9450E0080DBCC /* PanoRoomHeaderView.m */,
 			);
-			path = "鼓掌";
+			path = HeaderView;
 			sourceTree = "<group>";
 		};
-		BD49CCE02552A5EA00CA30EE /* 尴尬 */ = {
+		BDFF7F6426A9450E0080DBCC /* EarMonitoring */ = {
 			isa = PBXGroup;
 			children = (
-				BD49CCE12552A5EA00CA30EE /* 尴尬.caf */,
-			);
-			path = "尴尬";
-			sourceTree = "<group>";
-		};
-		BD49CCE22552A5EA00CA30EE /* 哈哈哈 */ = {
-			isa = PBXGroup;
-			children = (
-				BD49CCE32552A5EA00CA30EE /* 哈哈哈.caf */,
-			);
-			path = "哈哈哈";
-			sourceTree = "<group>";
-		};
-		BD49CCE42552A5EA00CA30EE /* 起哄 */ = {
-			isa = PBXGroup;
-			children = (
-				BD49CCE52552A5EA00CA30EE /* 起哄.caf */,
-			);
-			path = "起哄";
-			sourceTree = "<group>";
-		};
-		BD49CCE62552A5EA00CA30EE /* 哇哦 */ = {
-			isa = PBXGroup;
-			children = (
-				BD49CCE72552A5EA00CA30EE /* 哇哦.caf */,
-			);
-			path = "哇哦";
-			sourceTree = "<group>";
-		};
-		BD49CCEE2552CFB600CA30EE /* EarMonitoring */ = {
-			isa = PBXGroup;
-			children = (
-				BD49CCEF2552CFC600CA30EE /* PanoEarMonitoring.swift */,
+				BDFF7F6526A9450E0080DBCC /* PanoEarMonitoring.h */,
+				BDFF7F6626A9450E0080DBCC /* PanoEarMonitoring.m */,
 			);
 			path = EarMonitoring;
 			sourceTree = "<group>";
 		};
-		BD681C9626733CEF00C73AC1 /* OpenApi */ = {
+		BDFF7F6726A9450E0080DBCC /* Nav */ = {
 			isa = PBXGroup;
 			children = (
-				BD681C9726733D0A00C73AC1 /* PanoClientInterface.swift */,
-				BD681C9926733D5A00C73AC1 /* AppConfig.swift */,
+				BDFF7F6B26A9450E0080DBCC /* PanoNaviBadgeView.h */,
+				BDFF7F6926A9450E0080DBCC /* PanoNaviBadgeView.m */,
+				BDFF7F6A26A9450E0080DBCC /* PanoNaviTitleView.h */,
+				BDFF7F6826A9450E0080DBCC /* PanoNaviTitleView.m */,
 			);
-			path = OpenApi;
+			path = Nav;
 			sourceTree = "<group>";
 		};
-		BDD402C525621C010027D089 /* Localizable */ = {
+		BDFF7F6C26A9450E0080DBCC /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				BDD402CA25621C150027D089 /* Localizable.strings */,
+				BDFF7F7226A9450E0080DBCC /* PanoAudioPanelView.h */,
+				BDFF7F6F26A9450E0080DBCC /* PanoAudioPanelView.m */,
+				BDFF7F6E26A9450E0080DBCC /* PanoAudioPlayerView.h */,
+				BDFF7F7126A9450E0080DBCC /* PanoAudioPlayerView.m */,
+				BDFF7F7026A9450E0080DBCC /* PanoAudioVolume.h */,
+				BDFF7F6D26A9450E0080DBCC /* PanoAudioVolume.m */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		BDFF7F7426A9450E0080DBCC /* data */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7F7626A9450E0080DBCC /* PanoAudioRoomDataSource.h */,
+				BDFF7F7526A9450E0080DBCC /* PanoAudioRoomDataSource.m */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		BDFF7F7726A9450E0080DBCC /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7F7C26A9450E0080DBCC /* FeedbackViewController.h */,
+				BDFF7F8226A9450E0080DBCC /* FeedbackViewController.m */,
+				BDFF802126A977550080DBCC /* PanoVoiceTableController.h */,
+				BDFF802226A977550080DBCC /* PanoVoiceTableController.m */,
+				BDFF802426A9789F0080DBCC /* PanoFeedAudioController.h */,
+				BDFF802526A9789F0080DBCC /* PanoFeedAudioController.m */,
+				BDFF7F7E26A9450E0080DBCC /* Setting.storyboard */,
+				BDFF7F7826A9450E0080DBCC /* Setting.strings */,
+				BDFF7F7D26A9450E0080DBCC /* SettingTableViewController.h */,
+				BDFF7F8126A9450E0080DBCC /* SettingTableViewController.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		BDFF7F8326A9450E0080DBCC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7F9926A9450E0080DBCC /* GrowingTextView */,
+				BDFF7F8726A9450E0080DBCC /* MBProgressHUD+Extension.h */,
+				BDFF7F9426A9450E0080DBCC /* MBProgressHUD+Extension.m */,
+				BDFF7F8E26A9450E0080DBCC /* PanoAction.h */,
+				BDFF7F8426A9450E0080DBCC /* PanoAction.m */,
+				BDFF7F9726A9450E0080DBCC /* PanoArrayDataSource.h */,
+				BDFF7F8B26A9450E0080DBCC /* PanoArrayDataSource.m */,
+				BDFF7F8526A9450E0080DBCC /* PanoAvatorUtil.h */,
+				BDFF7F8D26A9450E0080DBCC /* PanoAvatorUtil.m */,
+				BDFF7F9526A9450E0080DBCC /* PanoDefine.h */,
+				BDFF7F9626A9450E0080DBCC /* PanoItem.h */,
+				BDFF7F8C26A9450E0080DBCC /* PanoItem.m */,
+				BDFF7F8F26A9450E0080DBCC /* PanoItemDelegate.h */,
+				BDFF7F9826A9450E0080DBCC /* PanoMenuCell.h */,
+				BDFF7F8A26A9450E0080DBCC /* PanoMenuCell.m */,
+				BDFF7F8926A9450E0080DBCC /* PanoMulticastDelegate.h */,
+				BDFF7F9226A9450E0080DBCC /* PanoMulticastDelegate.m */,
+				BDFF7F8626A9450E0080DBCC /* UIColor+Extension.h */,
+				BDFF7F9026A9450E0080DBCC /* UIColor+Extension.m */,
+				BDFF7F9326A9450E0080DBCC /* UIImage+Extension.h */,
+				BDFF7F8826A9450E0080DBCC /* UIImage+Extension.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BDFF7F9926A9450E0080DBCC /* GrowingTextView */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7F9B26A9450E0080DBCC /* PanoGrowingTextView.h */,
+				BDFF7F9D26A9450E0080DBCC /* PanoGrowingTextView.m */,
+				BDFF7F9C26A9450E0080DBCC /* PanoTextViewInternal.h */,
+				BDFF7F9A26A9450E0080DBCC /* PanoTextViewInternal.m */,
+			);
+			path = GrowingTextView;
+			sourceTree = "<group>";
+		};
+		BDFF7F9E26A9450E0080DBCC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7FA426A9450E0080DBCC /* PanoMessage.h */,
+				BDFF7F9F26A9450E0080DBCC /* PanoMessage.m */,
+				BDFF7FA326A9450E0080DBCC /* PanoMessageDefine.h */,
+				BDFF7FA726A9450E0080DBCC /* PanoMessageDefine.m */,
+				BDFF7FA126A9450E0080DBCC /* PanoMessageEnum.h */,
+				BDFF7FA026A9450E0080DBCC /* PanoMicInfo.h */,
+				BDFF7FA526A9450E0080DBCC /* PanoMicInfo.m */,
+				BDFF7FA626A9450E0080DBCC /* PanoUserInfo.h */,
+				BDFF7FA226A9450E0080DBCC /* PanoUserInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BDFF7FA826A9450E0080DBCC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7FA926A9450E0080DBCC /* Audio */,
+				BDFF7FBA26A9450E0080DBCC /* Localizable */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		BDFF7FA926A9450E0080DBCC /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7FAA26A9450E0080DBCC /* 音乐3.mp3 */,
+				BDFF7FAB26A9450E0080DBCC /* 音乐2.mp3 */,
+				BDFF7FAC26A9450E0080DBCC /* 音乐1.mp3 */,
+				BDFF7FAD26A9450E0080DBCC /* demo声效 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		BDFF7FAD26A9450E0080DBCC /* demo声效 */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7FAE26A9450E0080DBCC /* 乌鸦 */,
+				BDFF7FB026A9450E0080DBCC /* 鼓掌 */,
+				BDFF7FB226A9450E0080DBCC /* 尴尬 */,
+				BDFF7FB426A9450E0080DBCC /* 哈哈哈 */,
+				BDFF7FB626A9450E0080DBCC /* 起哄 */,
+				BDFF7FB826A9450E0080DBCC /* 哇哦 */,
+			);
+			path = "demo声效";
+			sourceTree = "<group>";
+		};
+		BDFF7FAE26A9450E0080DBCC /* 乌鸦 */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7FAF26A9450E0080DBCC /* 乌鸦.caf */,
+			);
+			path = "乌鸦";
+			sourceTree = "<group>";
+		};
+		BDFF7FB026A9450E0080DBCC /* 鼓掌 */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7FB126A9450E0080DBCC /* 鼓掌.caf */,
+			);
+			path = "鼓掌";
+			sourceTree = "<group>";
+		};
+		BDFF7FB226A9450E0080DBCC /* 尴尬 */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7FB326A9450E0080DBCC /* 尴尬.caf */,
+			);
+			path = "尴尬";
+			sourceTree = "<group>";
+		};
+		BDFF7FB426A9450E0080DBCC /* 哈哈哈 */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7FB526A9450E0080DBCC /* 哈哈哈.caf */,
+			);
+			path = "哈哈哈";
+			sourceTree = "<group>";
+		};
+		BDFF7FB626A9450E0080DBCC /* 起哄 */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7FB726A9450E0080DBCC /* 起哄.caf */,
+			);
+			path = "起哄";
+			sourceTree = "<group>";
+		};
+		BDFF7FB826A9450E0080DBCC /* 哇哦 */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7FB926A9450E0080DBCC /* 哇哦.caf */,
+			);
+			path = "哇哦";
+			sourceTree = "<group>";
+		};
+		BDFF7FBA26A9450E0080DBCC /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7FBB26A9450E0080DBCC /* Localizable.strings */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		BDFF7FBE26A9450E0080DBCC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7FC426A9450E0080DBCC /* PanoBaseService.h */,
+				BDFF7FC126A9450E0080DBCC /* PanoBaseService.m */,
+				BDFF7FC326A9450E0080DBCC /* PanoBaseView.h */,
+				BDFF7FBF26A9450E0080DBCC /* PanoBaseView.m */,
+				BDFF7FC226A9450E0080DBCC /* PanoBaseViewController.h */,
+				BDFF7FC026A9450E0080DBCC /* PanoBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		BDFF7FC526A9450E0080DBCC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF7FD526A9450E0080DBCC /* PanoAudioService.h */,
+				BDFF7FCE26A9450E0080DBCC /* PanoAudioService.m */,
+				BDFF7FCB26A9450E0080DBCC /* PanoChatService.h */,
+				BDFF7FD426A9450E0080DBCC /* PanoChatService.m */,
+				BDFF7FCC26A9450E0080DBCC /* PanoClientService.h */,
+				BDFF7FD326A9450E0080DBCC /* PanoClientService.m */,
+				BDFF7FD026A9450E0080DBCC /* PanoClientService+App.h */,
+				BDFF7FC926A9450E0080DBCC /* PanoClientService+App.m */,
+				BDFF7FCD26A9450E0080DBCC /* PanoClientService+OpenApi.h */,
+				BDFF7FD626A9450E0080DBCC /* PanoClientService+OpenApi.m */,
+				BDFF7FC826A9450E0080DBCC /* PanoPlayerService.h */,
+				BDFF7FD126A9450E0080DBCC /* PanoPlayerService.m */,
+				BDFF7FC626A9450E0080DBCC /* PanoSignalInterface.h */,
+				BDFF7FD226A9450E0080DBCC /* PanoSignalService.h */,
+				BDFF7FC726A9450E0080DBCC /* PanoSignalService.m */,
+				BDFF7FCF26A9450E0080DBCC /* PanoUserService.h */,
+				BDFF7FCA26A9450E0080DBCC /* PanoUserService.m */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BD1FCE57254A6B2900DE0CDE /* PanoAudioChat */ = {
+		BDFF7C4E26A8042E0080DBCC /* PanoAudioChat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD1FCE6C254A6B2B00DE0CDE /* Build configuration list for PBXNativeTarget "PanoAudioChat" */;
+			buildConfigurationList = BDFF7C6826A804320080DBCC /* Build configuration list for PBXNativeTarget "PanoAudioChat" */;
 			buildPhases = (
-				A89983FF084E666406B8E6A4 /* [CP] Check Pods Manifest.lock */,
-				BD1FCE54254A6B2900DE0CDE /* Sources */,
-				BD1FCE55254A6B2900DE0CDE /* Frameworks */,
-				BD1FCE56254A6B2900DE0CDE /* Resources */,
+				71E1E416E3BEAD9D0D113074 /* [CP] Check Pods Manifest.lock */,
+				BDFF7C4B26A8042E0080DBCC /* Sources */,
+				BDFF7C4C26A8042E0080DBCC /* Frameworks */,
+				BDFF7C4D26A8042E0080DBCC /* Resources */,
+				D1BD0A3C8FAEEF59C6B5CF78 /* [CP] Embed Pods Frameworks */,
+				BDFF7F2C26A91C100080DBCC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -585,25 +715,23 @@
 			);
 			name = PanoAudioChat;
 			productName = PanoAudioChat;
-			productReference = BD1FCE58254A6B2900DE0CDE /* PanoAudioChat.app */;
+			productReference = BDFF7C4F26A8042E0080DBCC /* PanoAudioChat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BD1FCE50254A6B2900DE0CDE /* Project object */ = {
+		BDFF7C4726A8042E0080DBCC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1230;
 				TargetAttributes = {
-					BD1FCE57254A6B2900DE0CDE = {
-						CreatedOnToolsVersion = 12.0;
-						LastSwiftMigration = 1200;
+					BDFF7C4E26A8042E0080DBCC = {
+						CreatedOnToolsVersion = 12.3;
 					};
 				};
 			};
-			buildConfigurationList = BD1FCE53254A6B2900DE0CDE /* Build configuration list for PBXProject "PanoAudioChat" */;
+			buildConfigurationList = BDFF7C4A26A8042E0080DBCC /* Build configuration list for PBXProject "PanoAudioChat" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -612,41 +740,43 @@
 				Base,
 				"zh-Hans",
 			);
-			mainGroup = BD1FCE4F254A6B2900DE0CDE;
-			productRefGroup = BD1FCE59254A6B2900DE0CDE /* Products */;
+			mainGroup = BDFF7C4626A8042E0080DBCC;
+			productRefGroup = BDFF7C5026A8042E0080DBCC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BD1FCE57254A6B2900DE0CDE /* PanoAudioChat */,
+				BDFF7C4E26A8042E0080DBCC /* PanoAudioChat */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BD1FCE56254A6B2900DE0CDE /* Resources */ = {
+		BDFF7C4D26A8042E0080DBCC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD49CCE82552A5EB00CA30EE /* 乌鸦.caf in Resources */,
-				BD49CCD82552A59E00CA30EE /* 音乐3.mp3 in Resources */,
-				BD49CCED2552A5EB00CA30EE /* 哇哦.caf in Resources */,
-				BD49CCE92552A5EB00CA30EE /* 鼓掌.caf in Resources */,
-				BD1FCE68254A6B2B00DE0CDE /* LaunchScreen.storyboard in Resources */,
-				BD49CCDA2552A59E00CA30EE /* 音乐1.mp3 in Resources */,
-				BD49CCEC2552A5EB00CA30EE /* 起哄.caf in Resources */,
-				BD49CCD92552A59E00CA30EE /* 音乐2.mp3 in Resources */,
-				BD49CCEB2552A5EB00CA30EE /* 哈哈哈.caf in Resources */,
-				BDD402C825621C150027D089 /* Localizable.strings in Resources */,
-				BD1FCE65254A6B2B00DE0CDE /* Assets.xcassets in Resources */,
-				BD49CCEA2552A5EB00CA30EE /* 尴尬.caf in Resources */,
-				BDD402CC25622E7F0027D089 /* Setting.storyboard in Resources */,
+				BDFF800E26A9450F0080DBCC /* 起哄.caf in Resources */,
+				BDFF7C6226A804320080DBCC /* LaunchScreen.storyboard in Resources */,
+				BDFF800926A9450F0080DBCC /* 音乐1.mp3 in Resources */,
+				BDFF7FF326A9450F0080DBCC /* Setting.strings in Resources */,
+				BDFF802C26A97C1A0080DBCC /* Assets.xcassets in Resources */,
+				BDFF800D26A9450F0080DBCC /* 哈哈哈.caf in Resources */,
+				BDFF7FF426A9450F0080DBCC /* Setting.storyboard in Resources */,
+				BDFF800726A9450F0080DBCC /* 音乐3.mp3 in Resources */,
+				BDFF800B26A9450F0080DBCC /* 鼓掌.caf in Resources */,
+				BDFF800C26A9450F0080DBCC /* 尴尬.caf in Resources */,
+				BDFF801026A9450F0080DBCC /* Localizable.strings in Resources */,
+				BDFF800A26A9450F0080DBCC /* 乌鸦.caf in Resources */,
+				BDFF7C5D26A8042E0080DBCC /* Main.storyboard in Resources */,
+				BDFF800826A9450F0080DBCC /* 音乐2.mp3 in Resources */,
+				BDFF800F26A9450F0080DBCC /* 哇哦.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A89983FF084E666406B8E6A4 /* [CP] Check Pods Manifest.lock */ = {
+		71E1E416E3BEAD9D0D113074 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -668,114 +798,145 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D1BD0A3C8FAEEF59C6B5CF78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PanoAudioChat/Pods-PanoAudioChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PanoAudioChat/Pods-PanoAudioChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PanoAudioChat/Pods-PanoAudioChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BD1FCE54254A6B2900DE0CDE /* Sources */ = {
+		BDFF7C4B26A8042E0080DBCC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD49CCBE25515E4100CA30EE /* PanoMyApplyView.swift in Sources */,
-				BD49CCB42550FD9700CA30EE /* PanoApplyUserListView.swift in Sources */,
-				BD1FCEB3254A8FD000DE0CDE /* PanoAppDefine.swift in Sources */,
-				BD1FCE8A254A6BFD00DE0CDE /* PanoClientService.swift in Sources */,
-				BD49CD032553A30900CA30EE /* SettingTableViewController.m in Sources */,
-				BD49CCBA25510A0700CA30EE /* PanoApplyAlertView.swift in Sources */,
-				BD49CCAC25502E1300CA30EE /* PanoAlertHelper.swift in Sources */,
-				BD1FCED2254AE5A600DE0CDE /* PanoAudioRoomPresenter.swift in Sources */,
-				BD1FCE60254A6B2900DE0CDE /* ViewController.swift in Sources */,
-				BD49CCC72551922F00CA30EE /* PanoPlayerService.swift in Sources */,
-				BD49CCCA25519A1C00CA30EE /* PanoSoundEffectView.swift in Sources */,
-				BD49CC9A254BF52400CA30EE /* PanoMicQueueView.swift in Sources */,
-				BD3DC426260AD6B800BF844D /* PanoVoiceTableController.swift in Sources */,
-				BD8A30092563743800B03474 /* PanoFeedAudioController.swift in Sources */,
-				BD1FCEA1254A6DDA00DE0CDE /* PanoJoinViewController.swift in Sources */,
-				BD49CCF22552E28600CA30EE /* PanoChatInputView.swift in Sources */,
-				BD1FCE87254A6BFD00DE0CDE /* PanoUserService.swift in Sources */,
-				BD1FCEB7254A95D900DE0CDE /* PanoTextField.swift in Sources */,
-				BD1FCE95254A6CBB00DE0CDE /* PanoBaseView.swift in Sources */,
-				BD1FCED4254AEAFD00DE0CDE /* PanoInviteListViewController.swift in Sources */,
-				BD49CCA7254FE69200CA30EE /* PanoUserListFooterView.swift in Sources */,
-				BD49CC98254BF52400CA30EE /* PanoMicButton.swift in Sources */,
-				BD1FCE8B254A6BFD00DE0CDE /* PanoServiceManager.swift in Sources */,
-				BD49CCD22552423C00CA30EE /* PanoAudioPlayerView.swift in Sources */,
-				BD49CCD425524B8C00CA30EE /* PanoAudioVolume.swift in Sources */,
-				BD1FCE89254A6BFD00DE0CDE /* PanoBaseService.swift in Sources */,
-				BD681CB526734BA600C73AC1 /* PanoClientService+App.swift in Sources */,
-				BD49CCB82551059600CA30EE /* PanoApplyUserListCell.swift in Sources */,
-				BD1FCEC7254AC9B400DE0CDE /* PanoMicInfo.swift in Sources */,
-				BD1FCE88254A6BFD00DE0CDE /* PanoAudioService.swift in Sources */,
-				BD1FCECC254ADBB500DE0CDE /* PanoAudioRoomDataSource.swift in Sources */,
-				BD49CCD0255241BD00CA30EE /* PanoAudioPanelView.swift in Sources */,
-				BD1FCEBD254AB6E900DE0CDE /* PanoMessageDefine.swift in Sources */,
-				BD49CCF02552CFC600CA30EE /* PanoEarMonitoring.swift in Sources */,
-				BD49CC97254BF52400CA30EE /* PanoRoomHeaderView.swift in Sources */,
-				BD1FCE9E254A6DBB00DE0CDE /* PanoHomeViewController.swift in Sources */,
-				BD1FCEBB254AA1E000DE0CDE /* PanoChatService.swift in Sources */,
-				BD1FCEB9254A9C3000DE0CDE /* PanoAudioRoomController.swift in Sources */,
-				BD49CCCC2552391A00CA30EE /* PanoChatView.swift in Sources */,
-				BD1FCE85254A6BFD00DE0CDE /* PanoHttpUtil.swift in Sources */,
-				BD49CCC0255163FA00CA30EE /* UIViewExtension.swift in Sources */,
-				BD681CBB267369CE00C73AC1 /* PanoSignalService.swift in Sources */,
-				BD49CC9C254BF55600CA30EE /* PanoNaviTitleView.swift in Sources */,
-				BD49CCA5254FE68600CA30EE /* PanoUserListHeaderView.swift in Sources */,
-				BD49CCCE2552394200CA30EE /* PanoChatTextCell.swift in Sources */,
-				BD977F442554DB0C00352FA4 /* PanoNaviBadgeView.swift in Sources */,
-				BD1FCE5C254A6B2900DE0CDE /* AppDelegate.swift in Sources */,
-				BD681C9A26733D5A00C73AC1 /* AppConfig.swift in Sources */,
-				BD1FCE84254A6BFD00DE0CDE /* MulticastDelegate.swift in Sources */,
-				BD49CCAA254FEBAA00CA30EE /* PanoUserListCell.swift in Sources */,
-				BD681C9C26733E4D00C73AC1 /* PanoClientService+ResutfulAPI.swift in Sources */,
-				BD1FCE9B254A6D8B00DE0CDE /* PanoBaseNavigationController.swift in Sources */,
-				BD1FCE98254A6D4900DE0CDE /* PanoBaseViewController.swift in Sources */,
-				BD49CD002553A2C200CA30EE /* FeedbackViewController.m in Sources */,
-				BD49CC99254BF52400CA30EE /* PanoMicCollectionCell.swift in Sources */,
-				BD49CCBC25511B5900CA30EE /* ColorExtension.swift in Sources */,
-				BD681C9826733D0A00C73AC1 /* PanoClientInterface.swift in Sources */,
-				BD681CB72673540700C73AC1 /* PanoClientService+OpenApi.swift in Sources */,
+				BDFF801326A9450F0080DBCC /* PanoBaseService.m in Sources */,
+				BDFF7FE126A9450F0080DBCC /* PanoChatTextCell.m in Sources */,
+				BDFF7FF026A9450F0080DBCC /* PanoAudioPanelView.m in Sources */,
+				BDFF801426A9450F0080DBCC /* PanoSignalService.m in Sources */,
+				BDFF7FEA26A9450F0080DBCC /* PanoApplyUserListView.m in Sources */,
+				BDFF7FFC26A9450F0080DBCC /* PanoItem.m in Sources */,
+				BDFF800526A9450F0080DBCC /* PanoMicInfo.m in Sources */,
+				BDFF7FF826A9450F0080DBCC /* PanoAction.m in Sources */,
+				BDFF7FE626A9450F0080DBCC /* PanoMicQueueView.m in Sources */,
+				BDFF7FDC26A9450F0080DBCC /* PanoInterface.m in Sources */,
+				BDFF7FE326A9450F0080DBCC /* PanoChatView.m in Sources */,
+				BDFF7FF226A9450F0080DBCC /* PanoAudioRoomDataSource.m in Sources */,
+				BDFF801626A9450F0080DBCC /* PanoUserService.m in Sources */,
+				BDFF7FE426A9450F0080DBCC /* PanoMicCollectionCell.m in Sources */,
+				BDFF800426A9450F0080DBCC /* PanoUserInfo.m in Sources */,
+				BDFF801826A9450F0080DBCC /* PanoPlayerService.m in Sources */,
+				BDFF801126A9450F0080DBCC /* PanoBaseView.m in Sources */,
+				BDFF7FE826A9450F0080DBCC /* PanoApplyAlertView.m in Sources */,
+				BDFF800126A9450F0080DBCC /* PanoTextViewInternal.m in Sources */,
+				BDFF7FE026A9450F0080DBCC /* PanoAudioRoomController.m in Sources */,
+				BDFF7C5426A8042E0080DBCC /* AppDelegate.m in Sources */,
+				BDFF802326A977550080DBCC /* PanoVoiceTableController.m in Sources */,
+				BDFF800326A9450F0080DBCC /* PanoMessage.m in Sources */,
+				BDFF7DC226A817D80080DBCC /* PanoHomeViewController.m in Sources */,
+				BDFF7DC126A817D80080DBCC /* PanoTextField.m in Sources */,
+				BDFF7C6526A804320080DBCC /* main.m in Sources */,
+				BDFF7FFB26A9450F0080DBCC /* PanoArrayDataSource.m in Sources */,
+				BDFF7FEF26A9450F0080DBCC /* PanoAudioVolume.m in Sources */,
+				BDFF800626A9450F0080DBCC /* PanoMessageDefine.m in Sources */,
+				BDFF7FEB26A9450F0080DBCC /* PanoRoomHeaderView.m in Sources */,
+				BDFF801526A9450F0080DBCC /* PanoClientService+App.m in Sources */,
+				BDFF801226A9450F0080DBCC /* PanoBaseViewController.m in Sources */,
+				BDFF7DC326A817D80080DBCC /* PanoJoinViewController.m in Sources */,
+				BDFF7FF926A9450F0080DBCC /* UIImage+Extension.m in Sources */,
+				BDFF7FF126A9450F0080DBCC /* PanoAudioPlayerView.m in Sources */,
+				BDFF7FDD26A9450F0080DBCC /* PanoUserListCell.m in Sources */,
+				BDFF801A26A9450F0080DBCC /* PanoChatService.m in Sources */,
+				BDFF801C26A9450F0080DBCC /* PanoClientConfig.m in Sources */,
+				BDFF7FEE26A9450F0080DBCC /* PanoNaviBadgeView.m in Sources */,
+				BDFF7FFF26A9450F0080DBCC /* PanoMulticastDelegate.m in Sources */,
+				BDFF802626A9789F0080DBCC /* PanoFeedAudioController.m in Sources */,
+				BDFF7FE926A9450F0080DBCC /* PanoApplyUserListCell.m in Sources */,
+				BDFF7FDB26A9450F0080DBCC /* AppConfig.m in Sources */,
+				BDFF7FF726A9450F0080DBCC /* FeedbackViewController.m in Sources */,
+				BDFF7FE726A9450F0080DBCC /* PanoMyApplyView.m in Sources */,
+				BDFF7FEC26A9450F0080DBCC /* PanoEarMonitoring.m in Sources */,
+				BDFF7FFD26A9450F0080DBCC /* PanoAvatorUtil.m in Sources */,
+				BDFF801926A9450F0080DBCC /* PanoClientService.m in Sources */,
+				BDFF800226A9450F0080DBCC /* PanoGrowingTextView.m in Sources */,
+				BDFF801B26A9450F0080DBCC /* PanoClientService+OpenApi.m in Sources */,
+				BDFF7FFE26A9450F0080DBCC /* UIColor+Extension.m in Sources */,
+				BDFF7FDF26A9450F0080DBCC /* PanoAudioRoomPresenter.m in Sources */,
+				BDFF800026A9450F0080DBCC /* MBProgressHUD+Extension.m in Sources */,
+				BDFF7FE526A9450F0080DBCC /* PanoMicButton.m in Sources */,
+				BDFF7FDE26A9450F0080DBCC /* PanoInviteListViewController.m in Sources */,
+				BDFF7FFA26A9450F0080DBCC /* PanoMenuCell.m in Sources */,
+				BDFF7FE226A9450F0080DBCC /* PanoChatInputView.m in Sources */,
+				BDFF7FED26A9450F0080DBCC /* PanoNaviTitleView.m in Sources */,
+				BDFF801726A9450F0080DBCC /* PanoAudioService.m in Sources */,
+				BDFF7FF626A9450F0080DBCC /* SettingTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BD1FCE66254A6B2B00DE0CDE /* LaunchScreen.storyboard */ = {
+		BDFF7C5B26A8042E0080DBCC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BD1FCE67254A6B2B00DE0CDE /* Base */,
-				BDD402BC25621B3F0027D089 /* zh-Hans */,
-				BDD402D4256252770027D089 /* en */,
+				BDFF7C5C26A8042E0080DBCC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BDFF7C6026A804320080DBCC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDFF7C6126A804320080DBCC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		BDD402CA25621C150027D089 /* Localizable.strings */ = {
+		BDFF7F7826A9450E0080DBCC /* Setting.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BDD402C925621C150027D089 /* en */,
-				BDD402CB25621C190027D089 /* zh-Hans */,
+				BDFF7F7926A9450E0080DBCC /* zh-Hans */,
+				BDFF7F7A26A9450E0080DBCC /* en */,
 			);
-			name = Localizable.strings;
+			name = Setting.strings;
 			sourceTree = "<group>";
 		};
-		BDD402CE25622E7F0027D089 /* Setting.storyboard */ = {
+		BDFF7F7E26A9450E0080DBCC /* Setting.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BDD402CD25622E7F0027D089 /* Base */,
-				BDD402D025622E840027D089 /* en */,
-				BDD402D225622E850027D089 /* zh-Hans */,
+				BDFF7F7F26A9450E0080DBCC /* Base */,
 			);
 			name = Setting.storyboard;
+			sourceTree = "<group>";
+		};
+		BDFF7FBB26A9450E0080DBCC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDFF7FBC26A9450E0080DBCC /* zh-Hans */,
+				BDFF7FBD26A9450E0080DBCC /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BD1FCE6A254A6B2B00DE0CDE /* Debug */ = {
+		BDFF7C6626A804320080DBCC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -823,21 +984,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		BD1FCE6B254A6B2B00DE0CDE /* Release */ = {
+		BDFF7C6726A804320080DBCC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -879,97 +1037,90 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		BD1FCE6D254A6B2B00DE0CDE /* Debug */ = {
+		BDFF7C6926A804320080DBCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D208B225937150E3ACAF9844 /* Pods-PanoAudioChat.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PanoAudioChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pano.audiochat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "PanoAudioChat/PanoAudioChat-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		BD1FCE6E254A6B2B00DE0CDE /* Release */ = {
+		BDFF7C6A26A804320080DBCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27A33F8EA87F6B239AB0BE9F /* Pods-PanoAudioChat.release.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PanoAudioChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pano.audiochat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "PanoAudioChat/PanoAudioChat-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BD1FCE53254A6B2900DE0CDE /* Build configuration list for PBXProject "PanoAudioChat" */ = {
+		BDFF7C4A26A8042E0080DBCC /* Build configuration list for PBXProject "PanoAudioChat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD1FCE6A254A6B2B00DE0CDE /* Debug */,
-				BD1FCE6B254A6B2B00DE0CDE /* Release */,
+				BDFF7C6626A804320080DBCC /* Debug */,
+				BDFF7C6726A804320080DBCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD1FCE6C254A6B2B00DE0CDE /* Build configuration list for PBXNativeTarget "PanoAudioChat" */ = {
+		BDFF7C6826A804320080DBCC /* Build configuration list for PBXNativeTarget "PanoAudioChat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD1FCE6D254A6B2B00DE0CDE /* Debug */,
-				BD1FCE6E254A6B2B00DE0CDE /* Release */,
+				BDFF7C6926A804320080DBCC /* Debug */,
+				BDFF7C6A26A804320080DBCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BD1FCE50254A6B2900DE0CDE /* Project object */;
+	rootObject = BDFF7C4726A8042E0080DBCC /* Project object */;
 }

@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  PanoAudioChat
+
+  Created by pano on 2020/11/16.
+  
+*/
+
+"Create a chat room" = "创建语聊房";
+"Join the chat room" = "加入语聊房";
+"debugAlert"    = "打开调试模式将会生成更多日志（最多200M），调试结束后请及时关闭调试模式。确定要打开调试模式吗？";
+
+"upgradeTitle"  = "版本升级";
+"upgradeAlert"  = "发现有新版本，是否升级？";
+"upgradeTitleForce"  = "强制升级";
+"upgradeAlertForce"  = "发现有新版本，需要强制升级";
+"upgrade"       = "马上升级";
+"notUpgrade"    = "暂不升级";
