@@ -16,7 +16,6 @@ import video.pano.audiochat.rtc.PanoTypeConstant;
 import video.pano.audiochat.rtc.PanoUserMgr;
 import video.pano.audiochat.rtc.data.PanoCmdUser;
 import video.pano.audiochat.rtc.data.PanoMsgFactory;
-import video.pano.audiochat.rtc.data.PanoUser;
 
 import static video.pano.audiochat.rtc.PanoTypeConstant.ALL_MIC_KEY;
 
@@ -71,37 +70,34 @@ public class MicApplyAdapter extends BaseAdapter {
                 "'" + PanoUserMgr.getIns().getUserNameById(user.userId)) + "'");
 
         holder.allow.setOnClickListener(v -> {
+            PanoUserMgr.getIns().updateAllUserStatus(user.userId, PanoTypeConstant.DONE);
+            PanoUserMgr.getIns().removeMicApplyUser(user.userId);
             PanoRtcEngine.getInstance().getMessageService().sendMessage(user.userId,
                     PanoMsgFactory.acceptApplyMsg(user));
-            PanoUserMgr.getIns().refreshUserStatus(user.userId, PanoTypeConstant.DONE);
 
-            //updateAllMic
-            PanoUserMgr.getIns().removeMicApplyUser(user.userId);
+            //TODO updateAllMic
             PanoUserMgr.getIns().addMicUser(user,PanoTypeConstant.DONE);
             PanoRtcEngine.getInstance().getMessageService().setProperty(ALL_MIC_KEY,PanoMsgFactory.updateAllMic());
-            if (mDealApplyCallback != null) {
-                mDealApplyCallback.onAcceptMicApply(user.order, user);
-            }
-            int count = PanoUserMgr.getIns().getMicApplyCount();
-            if(count > 0){
+
+            if (mDealApplyCallback != null) mDealApplyCallback.onAcceptMicApply(user.order, user);
+
+            if(PanoUserMgr.getIns().getMicApplyCount() > 0){
                 List<PanoCmdUser> temp = new ArrayList<>(PanoUserMgr.getIns().getMicApplyList());
                 PanoUserMgr.getIns().getMicApplyList().clear();
                 for(PanoCmdUser otherUser : temp){
-                    if (mDealApplyCallback != null) {
-                        mDealApplyCallback.onDeclineMicApply(otherUser);
+                    if(user.order == otherUser.order){
+                        if (mDealApplyCallback != null) mDealApplyCallback.onDeclineMicApply(otherUser);
+                        PanoRtcEngine.getInstance().getMessageService().sendMessage(otherUser.userId,PanoMsgFactory.declineApplyMsg(otherUser));
+                        PanoUserMgr.getIns().updateAllUserStatus(otherUser.userId, PanoTypeConstant.NONE);
                     }
-                    PanoRtcEngine.getInstance().getMessageService().sendMessage(otherUser.userId,PanoMsgFactory.declineApplyMsg(otherUser));
-                    PanoUserMgr.getIns().refreshUserStatus(otherUser.userId, PanoTypeConstant.NONE);
                 }
             }
         });
         holder.decline.setOnClickListener(v -> {
             PanoUserMgr.getIns().removeMicApplyUser(user.userId);
-            if (mDealApplyCallback != null) {
-                mDealApplyCallback.onDeclineMicApply(user);
-            }
+            if (mDealApplyCallback != null) mDealApplyCallback.onDeclineMicApply(user);
+            PanoUserMgr.getIns().updateAllUserStatus(user.userId, PanoTypeConstant.NONE);
             PanoRtcEngine.getInstance().getMessageService().sendMessage(user.userId,PanoMsgFactory.declineApplyMsg(user));
-            PanoUserMgr.getIns().refreshUserStatus(user.userId, PanoTypeConstant.NONE);
         });
 
         return convertView;

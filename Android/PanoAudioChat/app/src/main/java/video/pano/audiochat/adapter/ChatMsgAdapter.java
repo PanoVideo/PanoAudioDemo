@@ -50,7 +50,7 @@ public class ChatMsgAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = mInflater.inflate(R.layout.room_chat_msg_item, null);
             holder = new ViewHolder();
-            holder.msgView =  convertView.findViewById(R.id.chat_msg_tv);
+            holder.msgView = (TextView) convertView.findViewById(R.id.chat_msg_tv);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();

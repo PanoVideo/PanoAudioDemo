@@ -6,12 +6,11 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import video.pano.audiochat.R;
 import video.pano.audiochat.adapter.VoiceChangeAdapter;
 
-public class VoiceChaneListActivity extends AppCompatActivity {
+public class VoiceChaneListActivity extends BaseActivity {
 
     public static void start(Activity activity) {
         activity.startActivity(new Intent(activity, VoiceChaneListActivity.class));

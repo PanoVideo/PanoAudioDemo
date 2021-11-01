@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">PanoAudioChat</string>
     <string name="create_chat_room">Create a chat room</string>
+    <string name="local_song">Local Song</string>
     <string name="join_chat_room">Join a chat room</string>
     <string name="tips">Tips</string>
     <string name="cancel">Cancel</string>
@@ -13,8 +14,9 @@
     <string name="setting_max_participants">Max participants</string>
     <string name="setting_max_participants_people">100 People</string>
     <string name="setting_audio_pre_process">Audio Pre Process</string>
+    <string name="setting_high_quality_audio_mode">High Quality Audio Mode</string>
     <string name="setting_voice_change">Voice Change</string>
-    <string name="setting_audio_pre_process_tips">It is recommended to use with an external sound card</string>
+    <string name="setting_audio_pre_process_tips">Use an external sound card after closing</string>
     <string name="setting_audio_pre_process_warning">Please set before joining the room</string>
     <string name="setting_send_feedback">Send Feedback</string>
     <string name="setting_debug_mode">Debug Mode</string>
@@ -57,6 +59,7 @@
     <string name="room_user_apply_reject_occupied_toast">The current wheat position is already occupied</string>
     <string name="room_anchor_invite">The anchor is inviting you</string>
     <string name="room_anchor_invite_success">You have been invited successful</string>
+    <string name="room_user_killed_toast">The current mic has been closed</string>
     <string name="room_anchor_forbids_speak">The anchor forbids you to speak</string>
     <string name="room_unmute_mic">Open microphone</string>
     <string name="room_mute_mic">Close microphone</string>
@@ -64,6 +67,7 @@
     <string name="room_leave_mic">Leave microphone</string>
     <string name="room_join_the_room">%1$s Joined the room</string>
     <string name="room_leave_the_room">%1$s Leaved the room</string>
+    <string name="room_channel_failover">Connecting …</string>
     <string name="room_exit_and_disband">Exit and disband the room?</string>
     <string name="room_leave">Leave the room?</string>
     <string name="room_send_text_hint">send text</string>
@@ -76,7 +80,13 @@
     <string name="room_user_unknown">Unknown</string>
     <string name="room_invite_member_title">Choose Member</string>
     <string name="room_bgm_title">Background Music</string>
+    <string name="room_bgm_add_local_music">Add Local Music</string>
     <string name="room_sound_effect">Sound Effect</string>
     <string name="room_close">The room has been close</string>
     <string name="permission_request_message">Please allow the permission requests</string>
+
+    <string name="title_import_local_song_tips">Please put the audio files to be played into the "Pano/localSong" folder in the SD card</string>
+    <string name="title_high_quality_audio_tips">Cannot play through the earpiece when the High Quality Audio mode is turned on</string>
+
+    <string name="title_member_unknown">Unknown Artist</string>
 </resources>

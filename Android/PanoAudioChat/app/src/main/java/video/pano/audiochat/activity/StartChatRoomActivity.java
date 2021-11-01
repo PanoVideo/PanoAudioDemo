@@ -1,18 +1,19 @@
 package video.pano.audiochat.activity;
 
+import static video.pano.audiochat.utils.SPUtil.KEY_ROOM_ID;
+import static video.pano.audiochat.utils.SPUtil.KEY_USER_NAME;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.ActivityCompat.OnRequestPermissionsResultCallback;
 
@@ -25,15 +26,16 @@ import java.util.Random;
 import video.pano.audiochat.R;
 import video.pano.audiochat.rtc.PanoConfig;
 import video.pano.audiochat.utils.SPUtil;
+import video.pano.audiochat.view.ClearableEditText;
 import video.pano.audiochat.view.CommonTitle;
 
-public class StartChatRoomActivity extends AppCompatActivity implements OnRequestPermissionsResultCallback {
+public class StartChatRoomActivity extends BaseActivity implements OnRequestPermissionsResultCallback {
 
     private static final int PERMISSION_REQUEST_CODE = 1;
     private static final String TAG_CREATE = "isCreate";
     private boolean mIsCreate;
-    private EditText mRoomIdEdit;
-    private EditText mUserNameEdit;
+    private ClearableEditText mRoomIdEdit;
+    private ClearableEditText mUserNameEdit;
 
     public static void start(Activity activity, boolean isCreate) {
         Intent intent = new Intent(activity, StartChatRoomActivity.class);
@@ -51,7 +53,16 @@ public class StartChatRoomActivity extends AppCompatActivity implements OnReques
 
         mRoomIdEdit = findViewById(R.id.room_id_edit);
         mUserNameEdit = findViewById(R.id.user_name_edit);
-        mUserNameEdit.setText((String) SPUtil.getValue(this, SPUtil.KEY_USER_NAME, ""));
+
+        String userName = (String) SPUtil.getValue(this, KEY_USER_NAME, "");
+        String roomId = (String) SPUtil.getValue(this, KEY_ROOM_ID, "");
+
+        if (!TextUtils.isEmpty(userName)) {
+            mUserNameEdit.setText(userName);
+        }
+        if (!TextUtils.isEmpty(roomId)) {
+            mRoomIdEdit.setText(roomId);
+        }
 
         CommonTitle commonTitle = findViewById(R.id.create_chat_room_title);
         TextView startBtn = findViewById(R.id.start_btn);
@@ -129,7 +140,6 @@ public class StartChatRoomActivity extends AppCompatActivity implements OnReques
         String roomId = mRoomIdEdit.getText().toString();
         String userName = mUserNameEdit.getText().toString();
         long userId = 10000 + new Random().nextInt(5000);
-        ChatRoomActivity.start(this, roomId, userName, userId, PanoConfig.TOKEN, mIsCreate);
+        ChatRoomActivity.start(StartChatRoomActivity.this, roomId, userName, userId, PanoConfig.TOKEN, mIsCreate, PanoConfig.HOST_USER_ID);
     }
-
 }

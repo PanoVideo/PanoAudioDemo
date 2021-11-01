@@ -35,6 +35,10 @@ public class PanoRtcHandler implements RtcEngineCallback {
     @Override
     public void onChannelLeaveIndication(Constants.QResult qResult) {
         Log.i(TAG, "onChannelLeaveIndication = " + qResult);
+
+        for (PanoEvent event : mPanoEventList) {
+            event.onChannelLeaveIndication(qResult);
+        }
     }
 
     @Override
@@ -187,5 +191,8 @@ public class PanoRtcHandler implements RtcEngineCallback {
     @Override
     public void onChannelFailover(Constants.FailoverState failoverState) {
         Log.i(TAG, "onChannelFailover failoverState = " + failoverState);
+        for (PanoEvent event : mPanoEventList) {
+            event.onChannelFailover(failoverState);
+        }
     }
 }

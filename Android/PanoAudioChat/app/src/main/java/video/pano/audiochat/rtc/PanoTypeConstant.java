@@ -62,30 +62,29 @@ public class PanoTypeConstant {
     // 主播
     public static int HOST = 1;
 
-    // 麦位无人
-    public final static int NONE = 0;
 
-    // 麦位正在申请, 主播正在邀请观众
-    public final static int APPLYING = 1;
+    public final static int NONE = 0;// 麦位无人
 
-    // 申请完成，上麦
-    public final static int DONE = 2;
+    public final static int APPLYING = 1;// 麦位正在申请, 观众正在申请麦位/主播正在邀请观众
 
-    // 申请完成，上麦, 被主播静音
-    public final static int MUTE = 3;
+    public final static int DONE = 2; // 申请完成，上麦
 
-    // 麦位被关闭, 暂未使用
-    public final static int INVITING = 4;
+    public final static int MUTE = 3;// 申请完成，上麦, 被主播静音
 
+    public final static int CLOSE = 4;// 麦位被关闭, 暂未使用
+
+    public final static int MUTE_BY_SELF = 5;// 申请完成，上麦, 被自己静音
+
+
+    public final static int MIC_MUTE = 1 ; //麦上静音状态
+    public final static int MIC_UN_MUTE = 2; //麦上非静音状态
 
 
     public final static int REASON_NONE = 0;
 
-    // 申请上麦消息超时
-    public final static int REASON_TIMEOUT = -1;
+    public final static int REASON_TIMEOUT = -1; // 申请上麦消息超时
 
-    // 麦位已经被占用
-    public final static int REASON_OCCUPIED = -2;
+    public final static int REASON_OCCUPIED = -2;// 麦位已经被占用
 
 
     public final static String ALL_MIC_KEY = "msg_all_mic_info_key";

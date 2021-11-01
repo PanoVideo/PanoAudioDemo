@@ -99,8 +99,7 @@ public class PanoMsgFactory {
 
     public static byte[] updateAllMic(){
         try{
-            return sGson.toJson(new PanoCmdMessage(PanoTypeConstant.AllMic,
-                    PanoUserMgr.getIns().getMicList())).getBytes();
+            return sGson.toJson(new PanoCmdMessage(PanoTypeConstant.AllMic,PanoUserMgr.getIns().getMicList())).getBytes();
         }catch (Exception e){
             return null;
         }

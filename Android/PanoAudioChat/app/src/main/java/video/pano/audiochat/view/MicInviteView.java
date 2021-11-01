@@ -71,7 +71,7 @@ public class MicInviteView extends LinearLayout implements MicInviteAdapter.MicI
         int size = userList.size();
         for(int i = 0 ; i < size ; i ++){
             PanoUser user = userList.valueAt(i);
-            if (user.status == PanoTypeConstant.NONE && !user.isHost) {
+            if (user.status == PanoTypeConstant.NONE  && !user.isHost) {
                 tempList.add(user);
             }
         }

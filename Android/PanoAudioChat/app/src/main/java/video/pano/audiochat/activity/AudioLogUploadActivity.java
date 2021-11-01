@@ -7,14 +7,13 @@ import android.view.View;
 import android.widget.EditText;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import video.pano.audiochat.R;
 import video.pano.audiochat.rtc.PanoRtcEngine;
 import video.pano.audiochat.rtc.PanoRtcMgr;
 import video.pano.audiochat.rtc.data.PanoMsgFactory;
 
-public class AudioLogUploadActivity extends AppCompatActivity {
+public class AudioLogUploadActivity extends BaseActivity {
 
     private EditText mDesEdit;
 

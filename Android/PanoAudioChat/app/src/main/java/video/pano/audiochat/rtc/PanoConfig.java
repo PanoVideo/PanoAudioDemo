@@ -18,10 +18,14 @@ public class PanoConfig {
      *
      *   客户的App Server 需要保证
      *   1. 同一个房间ID，同一时间 只能有一个主播加入
+     *
+     *   HOST_USER_ID为房间房主的UserId，部分逻辑需要通过该UserId来处理
      */
     public static final String APPID = Your AppId;
     public static final String TOKEN = Your Token;
     public static final String PRODUCT_NAME = Your App Name;
     public static final String PANO_SERVER = "api.pano.video";
+    public static final String HOST_USER_ID = Your Host UserId;
 
 }
+

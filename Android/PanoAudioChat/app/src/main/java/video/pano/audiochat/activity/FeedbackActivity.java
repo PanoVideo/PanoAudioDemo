@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
 import com.pano.rtc.api.Constants;
@@ -18,7 +17,7 @@ import video.pano.audiochat.R;
 import video.pano.audiochat.rtc.PanoConfig;
 import video.pano.audiochat.rtc.PanoRtcEngine;
 
-public class FeedbackActivity extends AppCompatActivity {
+public class FeedbackActivity extends BaseActivity {
 
     private RadioGroup mRadioGroup;
     private EditText mDesEdit;

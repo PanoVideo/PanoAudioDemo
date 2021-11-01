@@ -7,6 +7,7 @@ public class SPUtil {
 
     public static final String DEFAULT_FILE_NAME = "default_pref";
     public static final String KEY_USER_NAME = "user_name";
+    public static final String KEY_ROOM_ID = "room_id";
 
     public static void setValue(Context context, String key, Object value) {
         setValue(context, DEFAULT_FILE_NAME, key, value);

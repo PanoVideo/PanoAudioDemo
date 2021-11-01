@@ -1,5 +1,7 @@
 package video.pano.audiochat.rtc;
 
+import android.text.TextUtils;
+
 import com.pano.rtc.api.Constants;
 import com.pano.rtc.api.RtcAudioMixingConfig;
 import com.pano.rtc.api.RtcEngine;
@@ -13,15 +15,19 @@ public class PanoRtcMgr {
 
     private PanoRtcHandler mPanoRtcHandler;
 
+    public static final int LOCAL_SONG_BGM_POS = -1;
+
     private String mAudioLogDes;
+    private String mCurrentLocalPath;
     private long mTaskId = 0;
     private long mCurrentBgmTaskId = -1;
     private long mCurrentSoundTaskId = -1;
     private BgmCallback mBgmCallback;
+    private BgmPlayCallback mBgmPlayCallback;
     private boolean mIsPlayingBgm;
+    private boolean mInRoom = false;
     private int mCurrentBgmPos = 0;
     private int mCurrentBgmVolume = 100;
-    private boolean mInRoom = false;
 
     private static class Holder {
         private static final PanoRtcMgr INSTANCE = new PanoRtcMgr();
@@ -42,7 +48,6 @@ public class PanoRtcMgr {
     public boolean inRoom() {
         return mInRoom;
     }
-
 
 
     public PanoRtcHandler getPanoRtcHandler() {
@@ -91,25 +96,31 @@ public class PanoRtcMgr {
     }
 
     public void playBgm() {
-
         if (mCurrentBgmTaskId > -1) {
             resumeBgm();
         } else {
-            playBgm(mCurrentBgmPos, mCurrentBgmVolume);
-        }
-        if (mBgmCallback != null) {
-            mBgmCallback.onBgmPlay(mCurrentBgmPos);
+            if (mCurrentBgmPos == LOCAL_SONG_BGM_POS && !TextUtils.isEmpty(mCurrentLocalPath)) {
+                playBgm(mCurrentLocalPath);
+            } else {
+                playBgm(mCurrentBgmPos, mCurrentBgmVolume);
+            }
+
         }
     }
 
     public void playNextBgm() {
         mCurrentBgmPos++;
         if (mCurrentBgmPos == AssetUtil.OUT_BGM_FILE_NAME.length) {
-            mCurrentBgmPos = 0;
+            if (!TextUtils.isEmpty(mCurrentLocalPath)) {
+                mCurrentBgmPos = LOCAL_SONG_BGM_POS;
+            } else {
+                mCurrentBgmPos = 0;
+            }
         }
-        playBgm(mCurrentBgmPos, mCurrentBgmVolume);
-        if (mBgmCallback != null) {
-            mBgmCallback.onBgmPlay(mCurrentBgmPos);
+        if (mCurrentBgmPos == LOCAL_SONG_BGM_POS) {
+            playBgm(mCurrentLocalPath);
+        } else {
+            playBgm(mCurrentBgmPos, mCurrentBgmVolume);
         }
     }
 
@@ -129,6 +140,41 @@ public class PanoRtcMgr {
         mIsPlayingBgm = true;
         mCurrentBgmPos = position;
         mCurrentBgmVolume = volume;
+
+        if (mBgmCallback != null) {
+            mBgmCallback.onBgmPlay(mCurrentBgmPos);
+        }
+
+        if (mBgmPlayCallback != null) {
+            mBgmPlayCallback.onBgmPlay(mCurrentBgmPos);
+        }
+    }
+
+    public void playBgm(String localPath) {
+        if (TextUtils.isEmpty(localPath)) return;
+        if (mCurrentBgmTaskId > -1) {
+            PanoRtcEngine.getInstance().getAudioMixingMgr().destroyAudioMixingTask(mCurrentBgmTaskId);
+        }
+        PanoRtcEngine.getInstance().getAudioMixingMgr().createAudioMixingTask(mTaskId,
+                localPath);
+        RtcAudioMixingConfig config = new RtcAudioMixingConfig();
+        config.cycle = 0;
+        config.publishVolume = mCurrentBgmVolume;
+        config.loopbackVolume = mCurrentBgmVolume;
+        PanoRtcEngine.getInstance().getAudioMixingMgr().startAudioMixingTask(mTaskId, config);
+
+        mCurrentLocalPath = localPath;
+        mCurrentBgmTaskId = mTaskId++;
+        mIsPlayingBgm = true;
+        mCurrentBgmPos = LOCAL_SONG_BGM_POS;
+
+        if (mBgmCallback != null) {
+            mBgmCallback.onBgmPlay(mCurrentBgmPos);
+        }
+
+        if (mBgmPlayCallback != null) {
+            mBgmPlayCallback.onBgmPlay(mCurrentBgmPos);
+        }
     }
 
     public void playSound(int position, int volume) {
@@ -154,6 +200,11 @@ public class PanoRtcMgr {
         }
         mCurrentBgmTaskId = -1;
         mIsPlayingBgm = false;
+        mTaskId = 0;
+        mCurrentSoundTaskId = -1;
+        mCurrentBgmPos = 0;
+        mCurrentBgmVolume = 100;
+        mCurrentLocalPath = null;
         if (mBgmCallback != null) {
             mBgmCallback.onBgmDestroy();
         }
@@ -173,8 +224,16 @@ public class PanoRtcMgr {
         return mIsPlayingBgm;
     }
 
+    public int getCurrentBgmPos() {
+        return mCurrentBgmPos;
+    }
+
     public void setBgmCallback(BgmCallback callback) {
         mBgmCallback = callback;
+    }
+
+    public void setBgmPlayCallback(BgmPlayCallback callback) {
+        mBgmPlayCallback = callback;
     }
 
     public void clearMusicCallback() {
@@ -223,8 +282,15 @@ public class PanoRtcMgr {
 
     public interface BgmCallback {
         void onBgmDestroy();
+
         void onBgmPlay(int position);
+
         void onBgmPause();
+
         void onBgmResume();
+    }
+
+    public interface BgmPlayCallback {
+        void onBgmPlay(int position);
     }
 }

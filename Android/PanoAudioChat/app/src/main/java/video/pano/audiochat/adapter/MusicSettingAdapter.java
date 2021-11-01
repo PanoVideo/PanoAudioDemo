@@ -96,6 +96,7 @@ public class MusicSettingAdapter extends BaseAdapter {
                     mLastSelectedPos = -1;
                     mLastSelectedView = null;
                 }
+                notifyDataSetChanged();
 
             } else {
                 PanoRtcMgr.getInstance().playSound(position, mVolume);
@@ -105,22 +106,30 @@ public class MusicSettingAdapter extends BaseAdapter {
         return convertView;
     }
 
-    public void setSelectedItem(TextView selectedView, int position) {
-        if (mLastSelectedPos != position) {
+//    public void setSelectedItem(TextView selectedView, int position) {
+//        if (mLastSelectedPos != position) {
+//
+//            if (mLastSelectedView != null) {
+//                mLastSelectedView.setBackgroundResource(R.drawable.bgm_item_bg_white);
+//                mLastSelectedView.setTextColor(mContext.getResources().getColor(R.color.color_333));
+//            }
+//            if (selectedView != null) {
+//                selectedView.setBackgroundResource(R.drawable.bgm_item_bg_blue);
+//                selectedView.setTextColor(Color.WHITE);
+//            }
+//
+//            mLastSelectedPos = position;
+//            mLastSelectedView = selectedView;
+//        }
+//    }
 
-            if (mLastSelectedView != null) {
-                mLastSelectedView.setBackgroundResource(R.drawable.bgm_item_bg_white);
-                mLastSelectedView.setTextColor(mContext.getResources().getColor(R.color.color_333));
-            }
-            if (selectedView != null) {
-                selectedView.setBackgroundResource(R.drawable.bgm_item_bg_blue);
-                selectedView.setTextColor(Color.WHITE);
-            }
-
-            mLastSelectedPos = position;
-            mLastSelectedView = selectedView;
-        }
+    public void setSelectedItem(int position){
+        if(mLastSelectedPos == position) return ;
+        mLastSelectedPos = position;
+        notifyDataSetChanged();
     }
+
+
 
     private static class ViewHolder {
         private TextView textView;

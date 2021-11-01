@@ -26,6 +26,9 @@
         android:text="@string/room_invite"
         android:textColor="@color/white"
         android:textSize="12sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLength="8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/mic_icon" />

@@ -25,7 +25,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/create_chat_room_title" />
 
-    <EditText
+
+
+    <video.pano.audiochat.view.ClearableEditText
         android:id="@+id/room_id_edit"
         android:layout_width="0dp"
         android:layout_height="40dp"
@@ -35,7 +37,7 @@
         android:background="@drawable/edit_text_bg"
         android:hint="@string/room_id_hint"
         android:inputType="text"
-        android:maxLength="36"
+        android:maxLength="20"
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
         android:singleLine="true"
@@ -59,7 +61,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/room_id_edit" />
 
-    <EditText
+    <video.pano.audiochat.view.ClearableEditText
         android:id="@+id/user_name_edit"
         android:layout_width="0dp"
         android:layout_height="40dp"
@@ -69,7 +71,7 @@
         android:background="@drawable/edit_text_bg"
         android:hint="@string/room_name_hint"
         android:inputType="text"
-        android:maxLength="36"
+        android:maxLength="20"
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
         android:singleLine="true"

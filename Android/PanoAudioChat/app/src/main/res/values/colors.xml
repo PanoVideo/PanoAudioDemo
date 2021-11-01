@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="color_333">#333333</color>
     <color name="color_eee">#eeeeee</color>
+    <color name="color_aaa">#aaaaaa</color>
+    <color name="panoBlue">#0899F9</color>
 </resources>

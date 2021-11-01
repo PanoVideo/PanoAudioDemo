@@ -1,38 +1,52 @@
 package video.pano.audiochat.activity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import video.pano.audiochat.R;
-import video.pano.audiochat.utils.SPUtil;
+import video.pano.audiochat.utils.Utils;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         checkAppUpdate();
     }
 
     public void onClickCreate(View view) {
-        StartChatRoomActivity.start(this, true);
+        if(!Utils.doubleClick()){
+            StartChatRoomActivity.start(this, true);
+        }
     }
 
     public void onClickJoin(View view) {
-        StartChatRoomActivity.start(this, false);
+        if(!Utils.doubleClick()){
+            StartChatRoomActivity.start(this, false);
+        }
     }
 
     public void onClickSetting(View view) {
-        SettingActivity.start(this);
+        if(!Utils.doubleClick()){
+            SettingActivity.start(this);
+        }
     }
 
-    /**
-     * 更新逻辑
-     */
     public void checkAppUpdate() {
+    }
+
+    public static void startMain(Activity activity){
+        Intent intent = new Intent(activity,MainActivity.class);
+        activity.startActivity(intent);
     }
 }

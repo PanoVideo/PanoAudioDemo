@@ -1,5 +1,7 @@
 package video.pano.audiochat.adapter;
 
+import static video.pano.audiochat.rtc.PanoTypeConstant.DEFAULT_MIC_SIZE;
+
 import android.content.Context;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -22,22 +24,22 @@ import video.pano.audiochat.rtc.data.PanoUser;
 import video.pano.audiochat.utils.AvatorUtil;
 import video.pano.audiochat.view.WaveImageView;
 
-import static video.pano.audiochat.rtc.PanoTypeConstant.DEFAULT_MIC_SIZE;
-
 public class UserMicStatusAdapter extends RecyclerView.Adapter<UserMicStatusAdapter.Holder> {
 
     private Context mContext;
+
     private List<PanoUser> mDataList;
+
     private int mAvatorSize;
     private int mMuteIconSize;
-    private boolean mIsHost;
+    private boolean mIsHost ;
 
     public UserMicStatusAdapter(Context context, boolean isHost) {
         mContext = context;
         DisplayMetrics dm = context.getResources().getDisplayMetrics();
         mAvatorSize = dm.widthPixels / 6;
         mMuteIconSize = mAvatorSize / 4;
-        mIsHost = isHost;
+        mIsHost = isHost ;
     }
 
     @NonNull
@@ -58,7 +60,7 @@ public class UserMicStatusAdapter extends RecyclerView.Adapter<UserMicStatusAdap
         PanoUser user = mDataList.get(position);
         holder.micStatus.setText(getMicStatusStr(user));
         holder.micIcon.setImageResource(getHeadImageRes(user));
-        if (user.status == PanoTypeConstant.MUTE) {
+        if (user.audioStatus == PanoTypeConstant.MIC_MUTE) {
             holder.muteIcon.setVisibility(View.VISIBLE);
         } else {
             holder.muteIcon.setVisibility(View.GONE);
@@ -82,11 +84,11 @@ public class UserMicStatusAdapter extends RecyclerView.Adapter<UserMicStatusAdap
     }
 
     private String getMicStatusStr(PanoUser user) {
-        if (user.status == PanoTypeConstant.DONE || user.status == PanoTypeConstant.MUTE) {
+        if (user.status == PanoTypeConstant.DONE
+                || user.status == PanoTypeConstant.MUTE || user.status == PanoTypeConstant.MUTE_BY_SELF) {
             return PanoUserMgr.getIns().getUserNameById(user.userId);
         }
-        return mIsHost ? PACApplication.getInstance().getString(R.string.room_invite)
-                : PACApplication.getInstance().getString(R.string.room_apply);
+        return mIsHost ? PACApplication.getInstance().getString(R.string.room_invite) : PACApplication.getInstance().getString(R.string.room_apply) ;
     }
 
     private int getHeadImageRes(PanoUser user) {
@@ -99,7 +101,7 @@ public class UserMicStatusAdapter extends RecyclerView.Adapter<UserMicStatusAdap
         return mDataList != null ? mDataList.size() : 0;
     }
 
-    public void initData() {
+    public void initData(){
         mDataList = new ArrayList<>();
         for (int i = 0; i < DEFAULT_MIC_SIZE; i++) {
             mDataList.add(new PanoUser(i));
@@ -117,42 +119,62 @@ public class UserMicStatusAdapter extends RecyclerView.Adapter<UserMicStatusAdap
 
     public void setDataList(List<PanoCmdUser> userList) {
         mDataList.clear();
-        for (PanoCmdUser cmdUser : userList) {
-            mDataList.add(new PanoUser(cmdUser));
+        for(PanoCmdUser cmdUser : userList){
+            PanoUser panoUser = new PanoUser(cmdUser);
+            if(PanoUserMgr.getIns().isMuteUser(panoUser.userId)){
+                panoUser.audioStatus = PanoTypeConstant.MIC_MUTE ;
+            }
+            mDataList.add(panoUser);
         }
         notifyDataSetChanged();
     }
 
-    public void addData(int micOrder, PanoCmdUser user) {
-        if (user == null) return;
+    public void addData(int micOrder , PanoCmdUser user){
+        if(user == null) return ;
         mDataList.set(micOrder, new PanoUser(user));
-        refreshUserStatus(user.userId, PanoTypeConstant.DONE);
+        refreshUserStatus(user.userId,PanoTypeConstant.DONE);
         notifyItemChanged(micOrder);
     }
 
-    public int refreshUserStatus(long userId, int micStatus) {
+    public int refreshUserStatus(long userId , int micStatus){
         PanoUser user = getUserById(userId);
-        if (user == null) return -1;
-        int order = user.order;
-        switch (micStatus) {
+        if(user == null) return -1;
+        int order = user.order ;
+        switch (micStatus){
             case PanoTypeConstant.NONE:
-                user.status = micStatus;
+                user.status = micStatus ;
                 user.recycle();
                 break;
             default:
-                user.status = micStatus;
+                user.status = micStatus ;
                 break;
         }
+        notifyItemChanged(order);
         return order;
     }
 
-    public int getItemStatus(long userId) {
+    public int refreshUserAudioStatus(long userId , int audioStatus){
         PanoUser user = getUserById(userId);
-        if (user == null) return PanoTypeConstant.NONE;
-        return user.status;
+        if(user == null) return -1;
+        int order = user.order ;
+        user.audioStatus = audioStatus ;
+        notifyItemChanged(order);
+        return order;
     }
 
-    public boolean hasUserAtPos(int order) {
+    public int getUserAudioStatus(long userId){
+        PanoUser user = getUserById(userId);
+        if(user == null) return -1;
+        return user.audioStatus;
+    }
+
+    public int getItemStatus(long userId){
+        PanoUser user = getUserById(userId);
+        if(user == null) return PanoTypeConstant.NONE;
+        return user.status ;
+    }
+
+    public boolean hasUserAtPos(int order){
         PanoUser user = mDataList.get(order);
         return user != null && user.userId > 0;
     }
@@ -173,8 +195,7 @@ public class UserMicStatusAdapter extends RecyclerView.Adapter<UserMicStatusAdap
     }
 
     private OnItemClickListener mOnItemClickListener;
-
-    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener){
         mOnItemClickListener = onItemClickListener;
     }
 

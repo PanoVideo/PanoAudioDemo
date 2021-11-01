@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">PanoAudioChat</string>
     <string name="create_chat_room">创建语聊房</string>
+    <string name="local_song">本地音频</string>
     <string name="join_chat_room">加入语聊房</string>
     <string name="tips">提示</string>
     <string name="cancel">取消</string>
@@ -13,8 +14,9 @@
     <string name="setting_max_participants">通话人数上限</string>
     <string name="setting_max_participants_people">100人</string>
     <string name="setting_audio_pre_process">音频预处理</string>
+    <string name="setting_high_quality_audio_mode">高清音乐模式</string>
     <string name="setting_voice_change">变声</string>
-    <string name="setting_audio_pre_process_tips">建议在外置声卡使用</string>
+    <string name="setting_audio_pre_process_tips">关闭后建议使用外置声卡</string>
     <string name="setting_audio_pre_process_warning">请在加入房间前设置</string>
     <string name="setting_send_feedback">故障上报</string>
     <string name="setting_debug_mode">调试模式</string>
@@ -55,6 +57,7 @@
     <string name="room_user_apply_reject_toast">主播拒绝了你的请求</string>
     <string name="room_user_apply_reject_timeout_toast">主播长时间未同意你的申请上麦</string>
     <string name="room_user_apply_reject_occupied_toast">当前麦位已被占用</string>
+    <string name="room_user_killed_toast">您已被主播请下麦位</string>
     <string name="room_anchor_invite">主播邀请您上麦</string>
     <string name="room_anchor_invite_success">您被主播邀请上线</string>
     <string name="room_anchor_forbids_speak">主播禁止你发音</string>
@@ -64,6 +67,7 @@
     <string name="room_leave_mic">我要下麦</string>
     <string name="room_join_the_room">%1$s 加入了房间</string>
     <string name="room_leave_the_room">%1$s 离开了房间</string>
+    <string name="room_channel_failover">正在连接 …</string>
     <string name="room_exit_and_disband">退出并解散房间？</string>
     <string name="room_leave">离开房间？</string>
     <string name="room_send_text_hint">聊两句</string>
@@ -76,7 +80,13 @@
     <string name="room_user_unknown">未知</string>
     <string name="room_invite_member_title">选择成员</string>
     <string name="room_bgm_title">背景音乐</string>
+    <string name="room_bgm_add_local_music">加载本地音乐</string>
     <string name="room_sound_effect">声效</string>
     <string name="room_close">房间已解散</string>
     <string name="permission_request_message">请允许后续对话框中的权限请求</string>
+
+    <string name="title_import_local_song_tips">请将需要播放的音频文件，放入SD卡中"Pano/localSong"文件夹下</string>
+    <string name="title_high_quality_audio_tips">开启高清音乐模式无法通过听筒播放</string>
+
+    <string name="title_member_unknown">未知艺术家</string>
 </resources>

@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PanoCmdMessage extends BaseMessage implements Serializable {
+public class PanoCmdMessage extends BaseCmdMessage implements Serializable {
     private static final long serialVersionUID = -6964392804540462611L;
 
     @SerializedName("data")

@@ -20,6 +20,9 @@ public class PanoUser {
     @SerializedName("status")
     public int status = PanoTypeConstant.NONE;
 
+    @SerializedName("audioStatus")
+    public int audioStatus = PanoTypeConstant.MIC_UN_MUTE;
+
     @SerializedName("isHost")
     public boolean isHost = false;
 
@@ -61,6 +64,7 @@ public class PanoUser {
         userName = null;
         //micOrder = -1;
         status = PanoTypeConstant.NONE;
+        audioStatus = PanoTypeConstant.MIC_UN_MUTE;
         isHost = false;
         speaking = false;
     }

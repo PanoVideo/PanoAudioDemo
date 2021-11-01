@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-public class PanoNormalMessage extends BaseMessage implements Serializable {
+public class PanoNormalMessage extends BaseCmdMessage implements Serializable {
 
     private static final long serialVersionUID = 6481119346600619512L;
 
