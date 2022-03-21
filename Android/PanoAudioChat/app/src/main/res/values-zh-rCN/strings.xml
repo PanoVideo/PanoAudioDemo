@@ -88,5 +88,11 @@
     <string name="title_import_local_song_tips">请将需要播放的音频文件，放入SD卡中"Pano/localSong"文件夹下</string>
     <string name="title_high_quality_audio_tips">开启高清音乐模式无法通过听筒播放</string>
 
+    <string name="pano_title_ask_again">权限申请</string>
+    <string name="pano_rationale_ask_again">
+        如果没有获取该权限，此应用程序的该功能可能无法正常运行。
+         请打开应用程序设置页面以修改应用程序权限。
+    </string>
+    <string name="permission_required_title">您的应用程序需要权限，否则您无法正常使用应用程序</string>
     <string name="title_member_unknown">未知艺术家</string>
 </resources>

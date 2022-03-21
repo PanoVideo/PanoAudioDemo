@@ -22,6 +22,7 @@ import video.pano.audiochat.rtc.PanoUserMgr;
 import video.pano.audiochat.rtc.data.PanoCmdUser;
 import video.pano.audiochat.rtc.data.PanoUser;
 import video.pano.audiochat.utils.AvatorUtil;
+import video.pano.audiochat.utils.Utils;
 import video.pano.audiochat.view.WaveImageView;
 
 public class UserMicStatusAdapter extends RecyclerView.Adapter<UserMicStatusAdapter.Holder> {
@@ -88,7 +89,7 @@ public class UserMicStatusAdapter extends RecyclerView.Adapter<UserMicStatusAdap
                 || user.status == PanoTypeConstant.MUTE || user.status == PanoTypeConstant.MUTE_BY_SELF) {
             return PanoUserMgr.getIns().getUserNameById(user.userId);
         }
-        return mIsHost ? PACApplication.getInstance().getString(R.string.room_invite) : PACApplication.getInstance().getString(R.string.room_apply) ;
+        return mIsHost ? Utils.getApp().getString(R.string.room_invite) : Utils.getApp().getString(R.string.room_apply) ;
     }
 
     private int getHeadImageRes(PanoUser user) {

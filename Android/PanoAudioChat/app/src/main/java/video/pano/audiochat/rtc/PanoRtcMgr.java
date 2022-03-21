@@ -6,10 +6,10 @@ import com.pano.rtc.api.Constants;
 import com.pano.rtc.api.RtcAudioMixingConfig;
 import com.pano.rtc.api.RtcEngine;
 
-import video.pano.audiochat.PACApplication;
 import video.pano.audiochat.adapter.VoiceChangeAdapter;
 import video.pano.audiochat.utils.AssetUtil;
 import video.pano.audiochat.utils.SPUtil;
+import video.pano.audiochat.utils.Utils;
 
 public class PanoRtcMgr {
 
@@ -246,7 +246,7 @@ public class PanoRtcMgr {
     }
 
     public Constants.AudioVoiceChangerOption getLastAudioVoiceChangerOption() {
-        int position = (int) SPUtil.getValue(PACApplication.getInstance(),
+        int position = (int) SPUtil.getValue(Utils.getApp(),
                 VoiceChangeAdapter.KEY_LAST_SELECTED_VOICE, 0);
         return getAudioVoiceChangerOption(position);
     }

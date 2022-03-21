@@ -86,6 +86,7 @@ import video.pano.audiochat.rtc.data.PanoUser;
 import video.pano.audiochat.utils.AvatorUtil;
 import video.pano.audiochat.utils.MiscUtils;
 import video.pano.audiochat.utils.SPUtil;
+import video.pano.audiochat.utils.Utils;
 import video.pano.audiochat.view.EarMonitorSettingView;
 import video.pano.audiochat.view.MicApplyView;
 import video.pano.audiochat.view.MicInviteView;
@@ -164,6 +165,7 @@ public class ChatRoomActivity extends BaseActivity implements PanoEvent, RtcAudi
     private final ChatHandler cHandler = new ChatHandler(this);
     private boolean mAudioHighQuality;
     private TextView mRoomIdText;
+    private EarMonitorSettingView mEarMonitorSettingView;
 
     private static final class ChatHandler extends Handler {
         WeakReference<ChatRoomActivity> chatWeakReference;
@@ -189,7 +191,7 @@ public class ChatRoomActivity extends BaseActivity implements PanoEvent, RtcAudi
                     PanoRtcEngine.getInstance().getMessageService().sendMessage(user1.userId, PanoMsgFactory.declineApplyMsg(REASON_TIMEOUT, user1));
                     PanoUserMgr.getIns().updateAllUserStatus(user1.userId, NONE);
                     PanoUserMgr.getIns().removeMicApplyUser(user1.userId);
-                    activity.onDeclineMicApply(user1);
+                    activity.refreshNoticeView();
                     break;
                 case REJECT_SELF_TIME_OUT:
                     if (activity.mMicApplyWaitingPopup == null || !activity.mMicApplyWaitingPopup.isShowing()) {
@@ -220,6 +222,7 @@ public class ChatRoomActivity extends BaseActivity implements PanoEvent, RtcAudi
                         activity.mMicApplyWaitingPopup.dismiss();
                     }
                     break;
+                default:break;
             }
         }
     }
@@ -256,6 +259,12 @@ public class ChatRoomActivity extends BaseActivity implements PanoEvent, RtcAudi
 
         setContentView(R.layout.activity_chat_room);
 
+        ((PACApplication)Utils.getApp()).getHeadsetPlug().observe(this, enable -> {
+            if(mEarMonitorSettingView != null){
+                mEarMonitorSettingView.updateHeadsetPlug(enable);
+            }
+        });
+
         Intent intent = getIntent();
         mRoomId = intent.getStringExtra(ROOM_ID);
         mUserName = intent.getStringExtra(USER_NAME);
@@ -265,7 +274,7 @@ public class ChatRoomActivity extends BaseActivity implements PanoEvent, RtcAudi
         String hostUserId = intent.getStringExtra(HOST_USER_ID);
 
         mAudioHighQuality = (boolean) SPUtil.getValue(
-                PACApplication.getInstance(),
+                Utils.getApp(),
                 SettingActivity.KEY_AUDIO_HIGH_QUALITY,
                 false);
 
@@ -474,9 +483,9 @@ public class ChatRoomActivity extends BaseActivity implements PanoEvent, RtcAudi
 
     private void showEarMonitorPopup() {
         if (mEarMonitorPopup == null) {
-            EarMonitorSettingView earMonitorSettingView = new EarMonitorSettingView(this);
-            earMonitorSettingView.setEarMonitorSettingCallback(this);
-            mEarMonitorPopup = new PopupWindow(earMonitorSettingView,
+            mEarMonitorSettingView = new EarMonitorSettingView(this);
+            mEarMonitorSettingView.setEarMonitorSettingCallback(this);
+            mEarMonitorPopup = new PopupWindow(mEarMonitorSettingView,
                     ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             mEarMonitorPopup.setBackgroundDrawable(new PaintDrawable(Color.TRANSPARENT));
             mEarMonitorPopup.setOutsideTouchable(true);
@@ -500,7 +509,9 @@ public class ChatRoomActivity extends BaseActivity implements PanoEvent, RtcAudi
     }
 
     public void onClickSetting(View view) {
-        SettingActivity.start(this);
+        if(!Utils.doubleClick()){
+            SettingActivity.start(this);
+        }
     }
 
     public void onClickExit(View view) {
@@ -527,10 +538,6 @@ public class ChatRoomActivity extends BaseActivity implements PanoEvent, RtcAudi
     }
 
     private void leaveRoom() {
-        if (mIsHost) {
-//            mRtcMessageService.broadcastMessage(PanoMsgFactory.closeRoomMsg(), false);
-        }
-
         mRtcEngine.stopAudio();
         mRtcEngine.leaveChannel();
         if (mDumpAudio) {
@@ -681,7 +688,6 @@ public class ChatRoomActivity extends BaseActivity implements PanoEvent, RtcAudi
             mMicApplyWaitingPopup = new PopupWindow(mWaitingView, ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.MATCH_PARENT);
             mMicApplyWaitingPopup.setBackgroundDrawable(new PaintDrawable(Color.TRANSPARENT));
-            mMicApplyWaitingPopup.setOutsideTouchable(false);
         }
         mWaitingView.setCmdUser(user);
         if (!mMicApplyWaitingPopup.isShowing()) {
@@ -930,6 +936,7 @@ public class ChatRoomActivity extends BaseActivity implements PanoEvent, RtcAudi
                         PanoRtcEngine.getInstance().getMessageService()
                                 .sendMessage(acceptUser.userId,
                                         PanoMsgFactory.declineApplyMsg(REASON_OCCUPIED, acceptUser));
+                        PanoUserMgr.getIns().updateAllUserStatus(acceptUser.userId, NONE);
                         return;
                     }
                     PanoUserMgr.getIns().updateAllUserStatus(acceptUser.userId, DONE);
@@ -987,7 +994,7 @@ public class ChatRoomActivity extends BaseActivity implements PanoEvent, RtcAudi
                         }
                         Toast.makeText(ChatRoomActivity.this,
                                 toastRes, Toast.LENGTH_SHORT).show();
-                        if (mMicApplyWaitingPopup.isShowing()) {
+                        if (mMicApplyWaitingPopup != null && mMicApplyWaitingPopup.isShowing()) {
                             mMicApplyWaitingPopup.dismiss();
                         }
                     });
@@ -1030,6 +1037,7 @@ public class ChatRoomActivity extends BaseActivity implements PanoEvent, RtcAudi
                                             PanoMsgFactory.rejectInviteMsg(user));
                                 })
                                 .create();
+                        mInviteDialog.setCanceledOnTouchOutside(false);
                         mInviteDialog.show();
                     });
                     sendDelayMessage(INVITE_TIME_OUT, TIME_OUT_DELAY, user);
@@ -1060,6 +1068,11 @@ public class ChatRoomActivity extends BaseActivity implements PanoEvent, RtcAudi
                 }
             }
         });
+    }
+
+    @Override
+    public void onEchoDelayChanged(int newDelay) {
+
     }
 
     @Override
@@ -1099,11 +1112,11 @@ public class ChatRoomActivity extends BaseActivity implements PanoEvent, RtcAudi
 
     @Override
     public void onAcceptMicApply(int micOrder, PanoCmdUser user) {
-        clearDelayMessage(mSendMessage);
-        refreshNoticeView();
         cHandler.post(() -> {
             mUserMicStatusAdapter.addData(micOrder, user);
         });
+        clearDelayMessage(mSendMessage);
+        refreshNoticeView();
     }
 
     @Override
@@ -1207,7 +1220,7 @@ public class ChatRoomActivity extends BaseActivity implements PanoEvent, RtcAudi
     }
 
     private void clearDelayMessage(Message message) {
-        if (message == null) return;
+        if (message == null || message.what <= 0) return;
         cHandler.removeMessages(message.what, message.obj);
     }
 }

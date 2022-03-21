@@ -26,8 +26,6 @@ public class ClearableEditText extends AppCompatEditText implements TextWatcher 
 
     @DrawableRes
     private static final int DEFAULT_CLEAR_ICON_RES_ID = R.drawable.svg_icon_delete;
-    @DrawableRes
-    private static final int DEFAULT_CLEAR_BG_RES_ID = R.drawable.edit_input_selector_bg;
 
     private Drawable mClearIconDrawable;
 
@@ -61,13 +59,6 @@ public class ClearableEditText extends AppCompatEditText implements TextWatcher 
         if (mClearIconDrawable != null) {
             mClearIconDrawable.setCallback(this);
         }
-//        if (a.hasValue(R.styleable.ClearableEditText_clearBgDrawable)) {
-//            Drawable clearBgDrawable = a.getDrawable(R.styleable.ClearableEditText_clearBgDrawable);
-//            setBackground(clearBgDrawable);
-//        } else {
-//            Drawable clearBgDrawable = ContextCompat.getDrawable(context, DEFAULT_CLEAR_BG_RES_ID);
-//            setBackground(clearBgDrawable);
-//        }
 
         mClearIconDrawWhenFocused =
                 a.getBoolean(R.styleable.ClearableEditText_clearIconDrawWhenFocused, true);

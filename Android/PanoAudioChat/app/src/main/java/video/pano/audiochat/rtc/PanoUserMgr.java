@@ -9,6 +9,7 @@ import video.pano.audiochat.PACApplication;
 import video.pano.audiochat.R;
 import video.pano.audiochat.rtc.data.PanoCmdUser;
 import video.pano.audiochat.rtc.data.PanoUser;
+import video.pano.audiochat.utils.Utils;
 
 import static video.pano.audiochat.rtc.PanoTypeConstant.DEFAULT_MIC_SIZE;
 import static video.pano.audiochat.rtc.PanoTypeConstant.MUTE;
@@ -72,7 +73,7 @@ public class PanoUserMgr {
     public String getUserNameById(long userId) {
         PanoUser user = mUserList.get(userId);
         if (user == null) {
-            return PACApplication.getInstance().getString(R.string.room_user_unknown);
+            return Utils.getApp().getString(R.string.room_user_unknown);
         }
         return user.userName;
     }

@@ -21,6 +21,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import video.pano.audiochat.PACApplication;
 import video.pano.audiochat.R;
 import video.pano.audiochat.rtc.PanoRtcEngine;
+import video.pano.audiochat.utils.Utils;
 
 public class EarMonitorSettingView extends ConstraintLayout {
 
@@ -51,8 +52,6 @@ public class EarMonitorSettingView extends ConstraintLayout {
             if (mEarMonitorSwitch.isChecked()) {
                 if (isWiredHeadsetOn()) {
                     PanoRtcEngine.getInstance().setAudioEarMonitoring(true);
-                    PanoRtcEngine.getInstance().setPlayoutDeviceVolume(mVolumeSeekBar.getProgress());
-                    PanoRtcEngine.getInstance().setRecordDeviceVolume(mVolumeSeekBar.getProgress());
                 } else {
                     PanoRtcEngine.getInstance().setAudioEarMonitoring(false);
                     Toast.makeText(context, R.string.room_ear_monitor_tips, Toast.LENGTH_SHORT).show();
@@ -69,7 +68,6 @@ public class EarMonitorSettingView extends ConstraintLayout {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (isWiredHeadsetOn()) {
                     PanoRtcEngine.getInstance().setPlayoutDeviceVolume(progress);
-                    PanoRtcEngine.getInstance().setRecordDeviceVolume(progress);
                 }
             }
 
@@ -86,7 +84,7 @@ public class EarMonitorSettingView extends ConstraintLayout {
     }
 
     private boolean isWiredHeadsetOn() {
-        AudioManager audioManager = (AudioManager) PACApplication.getInstance().getSystemService(Context.AUDIO_SERVICE);
+        AudioManager audioManager = (AudioManager) Utils.getApp().getSystemService(Context.AUDIO_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             AudioDeviceInfo[] devices = audioManager.getDevices(AudioManager.GET_DEVICES_OUTPUTS);
             for (AudioDeviceInfo device : devices) {
@@ -106,6 +104,12 @@ public class EarMonitorSettingView extends ConstraintLayout {
                     || audioManager.isBluetoothA2dpOn();
         }
         return false;
+    }
+
+    public void updateHeadsetPlug(boolean plug) {
+        if(mEarMonitorSwitch != null && mEarMonitorSwitch.isChecked() && !plug){
+            mEarMonitorSwitch.setChecked(false);
+        }
     }
 
     public void setEarMonitorSettingCallback(EarMonitorSettingCallback callback) {

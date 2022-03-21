@@ -12,6 +12,7 @@ import video.pano.audiochat.utils.Utils;
 
 public class MainActivity extends BaseActivity {
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +22,6 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        checkAppUpdate();
     }
 
     public void onClickCreate(View view) {
@@ -42,10 +42,7 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    public void checkAppUpdate() {
-    }
-
-    public static void startMain(Activity activity){
+    public static void launch(Activity activity){
         Intent intent = new Intent(activity,MainActivity.class);
         activity.startActivity(intent);
     }

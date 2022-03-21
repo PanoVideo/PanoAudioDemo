@@ -54,7 +54,7 @@ public class FileUtils {
         int titleEnd = filePath.lastIndexOf(".");
         if(titleStart > 0 &&titleEnd> 0 && titleStart < titleEnd &&  titleEnd < filePath.length() ){
             String filename = filePath.substring(titleStart+1,titleEnd);
-            return buildSong(PACApplication.getInstance().getApplicationContext().getString(R.string.title_member_unknown),
+            return buildSong(Utils.getApp().getApplicationContext().getString(R.string.title_member_unknown),
                     filename,filePath);
         }
         return null;
@@ -90,7 +90,7 @@ public class FileUtils {
         String[] selectionArgs = new String[] { getLocalSongDir().getAbsolutePath()+ "%" };
         Cursor cursor = null;
         try{
-            cursor = PACApplication.getInstance().getApplicationContext().getContentResolver()
+            cursor = Utils.getApp().getApplicationContext().getContentResolver()
                     .query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, columns,
                             selection, selectionArgs,
                             MediaStore.Audio.Media.DATE_MODIFIED );
@@ -111,7 +111,7 @@ public class FileUtils {
                     String artist = cursor.getString(2);
 
                     if(null != artist && artist.contains("unknown")){
-                        artist = PACApplication.getInstance().getApplicationContext().getString(R.string.title_member_unknown);
+                        artist = Utils.getApp().getApplicationContext().getString(R.string.title_member_unknown);
                     }
                     Song song= buildSong(artist,filename,filePath);
                     result.add(song);

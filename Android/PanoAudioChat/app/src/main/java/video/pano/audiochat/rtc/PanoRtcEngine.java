@@ -11,9 +11,9 @@ import com.pano.rtc.api.RtcEngine;
 import com.pano.rtc.api.RtcEngineCallback;
 import com.pano.rtc.api.RtcEngineConfig;
 
-import video.pano.audiochat.PACApplication;
 import video.pano.audiochat.activity.SettingActivity;
 import video.pano.audiochat.utils.SPUtil;
+import video.pano.audiochat.utils.Utils;
 
 public class PanoRtcEngine {
 
@@ -31,35 +31,35 @@ public class PanoRtcEngine {
     }
 
     public static void refresh(boolean audioPreProcess) {
-        RtcEngine.destroy();
+        mRtcEngine.destroy();
         boolean audioHighQuality = (boolean) SPUtil.getValue(
-                PACApplication.getInstance(),
+                Utils.getApp(),
                 SettingActivity.KEY_AUDIO_HIGH_QUALITY,
                 false);
         createEngine(audioPreProcess, audioHighQuality ? 1 : 0);
     }
 
     public static void refresh(int audioHighQuality) {
-        RtcEngine.destroy();
+        mRtcEngine.destroy();
         boolean audioPreProcess = (boolean) SPUtil.getValue(
-                PACApplication.getInstance(),
+                Utils.getApp(),
                 SettingActivity.KEY_AUDIO_PRE_PROCESS,
                 false);
         createEngine(audioPreProcess,audioHighQuality);
     }
 
     public static void clear(){
-        RtcEngine.destroy();
+        mRtcEngine.destroy();
         mRtcEngine = null ;
     }
 
     private static void createEngine(){
         boolean audioPreProcess = (boolean) SPUtil.getValue(
-                PACApplication.getInstance(),
+                Utils.getApp(),
                 SettingActivity.KEY_AUDIO_PRE_PROCESS,
                 false);
         boolean audioHighQuality = (boolean) SPUtil.getValue(
-                PACApplication.getInstance(),
+                Utils.getApp(),
                 SettingActivity.KEY_AUDIO_HIGH_QUALITY,
                 false);
         createEngine(audioPreProcess,audioHighQuality ? 1 : 0);
@@ -69,7 +69,7 @@ public class PanoRtcEngine {
         try {
             if (audioPreProcess) {
                 mRtcEngine = RtcEngine.create(getConfig(
-                        PACApplication.getInstance(),
+                        Utils.getApp(),
                         Constants.AudioAecType.Default,
                         audioScenario,
                         PanoRtcMgr.getInstance().getPanoRtcHandler()));
@@ -81,7 +81,7 @@ public class PanoRtcEngine {
                         Constants.AudioPreProcessModeOption.Default);
             } else {
                 mRtcEngine = RtcEngine.create(getConfig(
-                        PACApplication.getInstance(),
+                        Utils.getApp(),
                         Constants.AudioAecType.Off,
                         audioScenario,
                         PanoRtcMgr.getInstance().getPanoRtcHandler()));

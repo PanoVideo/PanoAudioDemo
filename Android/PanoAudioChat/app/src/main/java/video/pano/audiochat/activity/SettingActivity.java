@@ -12,10 +12,12 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SwitchCompat;
 
+import video.pano.audiochat.BuildConfig;
 import video.pano.audiochat.R;
 import video.pano.audiochat.rtc.PanoRtcEngine;
 import video.pano.audiochat.rtc.PanoRtcMgr;
 import video.pano.audiochat.utils.SPUtil;
+import video.pano.audiochat.utils.Utils;
 
 public class SettingActivity extends BaseActivity {
 
@@ -44,6 +46,7 @@ public class SettingActivity extends BaseActivity {
         setDebugModeSwitch();
         setAudioHighQualitySwitch();
         setAudioAudioPreProcessSwitch();
+        setVersionName();
     }
 
     private void setUserNameEdit() {
@@ -104,17 +107,28 @@ public class SettingActivity extends BaseActivity {
         });
     }
 
+    private void setVersionName() {
+        TextView versionNameTv = findViewById(R.id.app_version_des);
+        versionNameTv.setText("v" + BuildConfig.VERSION_NAME + "("
+                + PanoRtcEngine.getInstance().getSdkVersion() + ")");
+    }
 
     public void onClickSendFeedback(View view) {
-        FeedbackActivity.start(this);
+        if(!Utils.doubleClick()){
+            FeedbackActivity.start(this);
+        }
     }
 
     public void onClickVoiceChange(View view) {
-        VoiceChaneListActivity.start(this);
+        if(!Utils.doubleClick()){
+            VoiceChaneListActivity.start(this);
+        }
     }
 
     public void onClickUploadAudioLog(View view) {
-        AudioLogUploadActivity.start(this);
+        if(!Utils.doubleClick()){
+            AudioLogUploadActivity.start(this);
+        }
     }
 
     @Override

@@ -88,5 +88,11 @@
     <string name="title_import_local_song_tips">Please put the audio files to be played into the "Pano/localSong" folder in the SD card</string>
     <string name="title_high_quality_audio_tips">Cannot play through the earpiece when the High Quality Audio mode is turned on</string>
 
+    <string name="pano_title_ask_again">Permissions Required</string>
+    <string name="pano_rationale_ask_again">
+        This app may not work correctly without the requested permissions.
+        Open the app settings screen to modify app permissions.
+    </string>
+    <string name="permission_required_title">Your application needs some permissions, otherwise you cannot use normally</string>
     <string name="title_member_unknown">Unknown Artist</string>
 </resources>

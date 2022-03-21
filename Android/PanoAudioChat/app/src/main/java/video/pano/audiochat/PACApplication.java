@@ -1,50 +1,44 @@
 package video.pano.audiochat;
 
 import android.app.Application;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 
-import com.pano.rtc.api.RtcEngine;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
+import video.pano.audiochat.receiver.HeadsetPlugReceiver;
 import video.pano.audiochat.rtc.PanoRtcEngine;
 import video.pano.audiochat.utils.AssetUtil;
+import video.pano.audiochat.utils.Utils;
 
 public class PACApplication extends Application {
 
-    private static PACApplication sInstance;
+    private HeadsetPlugReceiver mReceiver;
+    MutableLiveData<Boolean> mHeadsetPlug = new MutableLiveData<>();
 
     @Override
     public void onCreate() {
         super.onCreate();
-
-        sInstance = this;
-
+        Utils.init(this);
         AssetUtil.init();
-        registerReceiver(new HeadsetPlugReceiver(), new IntentFilter(Intent.ACTION_HEADSET_PLUG));
+        mReceiver = new HeadsetPlugReceiver();
+        registerReceiver(mReceiver, new IntentFilter(Intent.ACTION_HEADSET_PLUG));
     }
 
-    public static PACApplication getInstance() {
-        return sInstance;
+    public LiveData<Boolean> getHeadsetPlug() {
+        return mHeadsetPlug;
     }
 
-    private static class HeadsetPlugReceiver extends BroadcastReceiver {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-
-            if (intent.hasExtra("state")) {
-                if (intent.getIntExtra("state", 0) == 0) {
-                    PanoRtcEngine.getInstance().setAudioEarMonitoring(false);
-                }
-            }
-        }
+    public void updateHeadsetPlug(boolean plug) {
+        mHeadsetPlug.postValue(plug);
     }
 
     @Override
     public void onTerminate() {
         super.onTerminate();
-        RtcEngine.destroy();
+        if (mReceiver != null) unregisterReceiver(mReceiver);
+        PanoRtcEngine.clear();
     }
+
 }

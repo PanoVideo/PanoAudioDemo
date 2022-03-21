@@ -29,7 +29,7 @@ public class AssetUtil {
 
     private static String copyAssetAndWrite(String fileName) {
         try {
-            File cacheDir = PACApplication.getInstance().getCacheDir();
+            File cacheDir = Utils.getApp().getCacheDir();
             if (!cacheDir.exists()) {
                 cacheDir.mkdirs();
             }
@@ -44,7 +44,7 @@ public class AssetUtil {
                     return outFile.getAbsolutePath();
                 }
             }
-            InputStream is = PACApplication.getInstance().getAssets().open(fileName);
+            InputStream is = Utils.getApp().getAssets().open(fileName);
             FileOutputStream fos = new FileOutputStream(outFile);
             byte[] buffer = new byte[1024];
             int byteCount;

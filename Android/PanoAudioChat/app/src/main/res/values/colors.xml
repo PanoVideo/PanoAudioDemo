@@ -3,7 +3,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="color_333">#333333</color>
+    <color name="color_999">#999999</color>
     <color name="color_eee">#eeeeee</color>
     <color name="color_aaa">#aaaaaa</color>
+    <color name="color_ccc">#cccccc</color>
+    <color name="color_ddd">#dddddd</color>
     <color name="panoBlue">#0899F9</color>
 </resources>
